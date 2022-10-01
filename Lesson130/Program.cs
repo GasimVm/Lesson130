@@ -14,6 +14,7 @@ namespace Lesson130
             Console.WriteLine("Senin nece yasin var?");
             string userInput2 = Console.ReadLine();
             int b = age - 10;
+
             Console.WriteLine($"Senin bu qeder yaSIN VAR : {b}");
             
              
