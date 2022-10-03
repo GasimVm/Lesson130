@@ -6,48 +6,161 @@ namespace Lesson130
     {
         static void Main(string[] args)
         {
-            // impilicit
-            //int i = 5;
-            //double dv = i;
+            #region Task 1
 
-            //// expilicit
-            //double dbl = 45.8;
-            //int num =(int) dbl;
+            //Console.WriteLine("Input daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.TrimStart();
+            //Console.WriteLine(a);
 
-            //// unboxing
-            //object obj = "56";
-            //int number =(int) obj;
-            //// boxing
-            //double dbl2 = 45.7;
-            //object obj2 = dbl2;
+            #endregion
+            #region Task 2
 
-            // Random random = new Random();
-            // int ramEded = random.Next(25,50);
-            //// Console.WriteLine(ramEded);
+            //Console.WriteLine("Input daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.Contains('e') || a.Contains('q') ? "Can not enter 'e' or 'q' symbol" : a ;
+            //Console.WriteLine(a);
 
-            // Guid guid = Guid.NewGuid();
-            // Console.WriteLine(guid);
-            int x = 3;
-            int y = 35;
-            string str = null;
-            // ternary operator
-            //  var rgrfr = y > x ? "" : "";
-            // var  Enboyuk = x > y ? 25.6 : 456.8;
+            #endregion
+            #region Task 3
 
-            //null coalescing
-            //   var str2 = str ?? "Null-dir";
-            // Console.WriteLine(Enboyuk);
+            //Console.WriteLine("Input daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.Trim();
+            //a = a.ToUpper();
+            //Console.WriteLine(a);
 
-            //if ( y>x  )
+            #endregion
+            #region Task 4
+
+            //Console.WriteLine("Input daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.Length >= 8 ? a.Substring(3, 5) : "Can not execute operation...";
+            //Console.WriteLine(a);
+
+            #endregion
+            #region Task 5 yarimciq
+
+            //Console.WriteLine("Input daxil edin : ");
+            ////string a = null; // ozumuz verende ishleyir, istifadeci ama null vere bilmir
+            //string a = Console.ReadLine();
+            //a = string.IsNullOrWhiteSpace(a) ? "Value can not be empty or whitespace" : a;
+            //Console.WriteLine(a);
+
+            #endregion
+            #region Task 6
+
+            //const string a = "Nurlan";
+            //Console.WriteLine(a);
+
+            #endregion
+            #region Task 7
+
+            //Random random = new Random();
+            //int randomNumber = random.Next(0, 100);
+            //Console.WriteLine(randomNumber);
+
+            #endregion
+            #region Task 8
+
+            //Random random = new Random();
+            //int randomNumber = random.Next(10, 2333);
+            //Console.WriteLine(randomNumber);
+
+            #endregion
+            #region Task 9
+
+            //Guid guid = Guid.NewGuid();
+            //Console.WriteLine(guid);
+
+            #endregion
+            #region Task 10
+
+            //Console.WriteLine("Eded daxil edin : ");
+            //int a = int.Parse(Console.ReadLine());
+            //if (a > 10)
             //{
-            //    Console.WriteLine("Ela");
+            //    Console.WriteLine("10-dan boyukdur");
             //}
-            Console.WriteLine("Main TO programcs");
+            //else if (a < 10)
+            //    Console.WriteLine("10-dan kicikdir");
+            //else
+            //    Console.WriteLine("10-a beraberdir");
 
-            
+            #endregion
+            #region Task 11
+
+            //Console.WriteLine("String deyer daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.Length > 6 ? "6-dan böyük" : a.Length < 6 ? "6-dan kiçik" : "6-a bərabər";
+            //Console.WriteLine(a);
+
+            #endregion
+            #region Task 12
+
+            //Console.WriteLine("Deyer daxil edin : ");
+            //int a = int.Parse(Console.ReadLine());
+            //if (a==6 || a ==7)
+            //{
+            //    Console.WriteLine("Duzgun cavab!");
+            //}
+            //else
+            //    Console.WriteLine(a);
+            #endregion
+            #region Task 13
+
+            //Console.WriteLine("Deyer daxil edin : ");
+            //int a = int.Parse( Console.ReadLine() );
+            //if (1 <= a && a < 10)
+            //{
+            //    Console.WriteLine("1-10 aralığı");
+            //}
+            //else if (10 <= a && a < 20)
+            //    Console.WriteLine("10-20 aralığı");
+            //else
+            //    Console.WriteLine("Netice tapilmadi");
+
+            #endregion
+            #region Task 14
+
+            //Console.WriteLine("Eded daxil edin : ");
+            //int a = int.Parse( Console.ReadLine() );
+            //if (a % 2 == 0)
+            //{
+            //    Console.WriteLine("Cut ededdir");
+            //}
+            //else
+            //    Console.WriteLine("Tek ededdir");
+
+            #endregion
+            #region Task 15
+
+            //Random random = new Random();
+            //int ran = random.Next(0, 100);
+            //int b = 0;
+            //ran = ran > 50 ? ran : b;
+            //Console.WriteLine(ran);
+
+            #endregion
+            #region Task 16
+
+            //Console.WriteLine("Eded daxil edin : ");
+            //int a = int.Parse(Console.ReadLine());
+            //string b = a % 2 == 0 ? "Cut ededdir" : "Tek ededdir";
+            //Console.WriteLine(b);
+
+            #endregion
+            #region Task 17
+
+            //Console.WriteLine("Deyer daxil edin : ");
+            //string a = Console.ReadLine();
+            //a = a.IndexOf('t') == a.LastIndexOf('t') ? "Deyerde 1 t herfi var" : "Deyerde 1-den chox t var";
+            //Console.WriteLine(a);
+
+            #endregion
 
         }
-         
+
 
     }
 }
