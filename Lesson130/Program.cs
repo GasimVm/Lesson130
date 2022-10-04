@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+
             #region Task 1
 
             //Console.WriteLine("Input daxil edin : ");
@@ -37,10 +38,9 @@
             //Console.WriteLine(a);
 
             #endregion
-            #region Task 5 yarimciq
+            #region Task 5 
 
             //Console.WriteLine("Input daxil edin : ");
-            ////string a = null; // ozumuz verende ishleyir, istifadeci ama null vere bilmir
             //string a = Console.ReadLine();
             //a = string.IsNullOrWhiteSpace(a) ? "Value can not be empty or whitespace" : a;
             //Console.WriteLine(a);
