@@ -7,36 +7,36 @@ namespace ConsoleApp1
         static void Main(string[] SabinaHomework)
         {
             /* 1- “02.03.2021 tarixində hava soyuq idi” cümləsində 02.03.2021 tarixini string format və interpolation istifadə edərək(ayrı ayrılıqda) console-a yazdırın. Tarix cari tarix olsun(DateTime istifadə edin).*/
-             
+
             var date4 = DateTime.Now;
             var date5 = date4.ToString("dd/MM/yyyy");
             Console.WriteLine($"{date5} tarixinde hava soyuq idi");
 
             /* 2 - string tipindən name adlı variable yaradın və string format istifadə edərək ekrana “My name is x” yazdırın. X yerinə name variablesinin dəyəri olsun.*/
-             
-             string x = "Sabina";
-             Console.WriteLine("My name is " + x);
+
+            string x = "Sabina";
+            Console.WriteLine("My name is " + x);
 
             /* 3- string tipindən olan variablenin dəyərinin uzunluğunu ekrana yazdırın. */
 
             /*1-ci usul: */
-             
-             string full_name = "Sabina Misirova";
-             var leng = full_name.Length;
-             Console.WriteLine(leng);
+
+            string full_name = "Sabina Misirova";
+            var leng = full_name.Length;
+            Console.WriteLine(leng);
 
             /*2-ci usul: */
-             
+
             string full_name_ = "Sabina Misirova";
             Console.WriteLine(full_name_.Length);
 
-            /* 4- DateTime ilə cari tarix götürülsün və format edilərək “dd/MM/yyyy hh:mm” formatına salınsın.*/ 
-              
+            /* 4- DateTime ilə cari tarix götürülsün və format edilərək “dd/MM/yyyy hh:mm” formatına salınsın.*/
+
             var time = DateTime.Now.ToString("dd/MMMM/YYYY hh:mm");
             Console.WriteLine(time);
 
             /* 5- String tipindən olan dəyərin başlıqdan və sondan, sondan və başlıqdan olan boşluqlarını silin.*/
-             
+
             string deyer = "    Sabina Misirova    ";
             var deyerlower = deyer.Trim();
             Console.WriteLine(deyerlower);
@@ -47,12 +47,12 @@ namespace ConsoleApp1
 
 
             /* 6- String tipindən olan dəyərdə a hərflərini b hərfi ilə əvəz edin..*/
-             
+
             string metn = "Kod yazmaqdan daha maraqli mesguliyyet var mi?";
             var b = metn.Replace("a", "b");
             Console.WriteLine(b);
 
-            
+
 
             /* 7- Parse metodunu 3 fərqli data type üçün yazın.*/
 
@@ -65,7 +65,7 @@ namespace ConsoleApp1
             double dogum_t2 = int.Parse("23101964");
             Console.WriteLine(dogum_t2);
 
-            /* 8- String contains üçün nümunə yazın.*/  
+            /* 8- String contains üçün nümunə yazın.*/
 
             string cumle = "Back end developer olanlardan neyim eskikdir?";
             var me = cumle.Contains("Back end");
@@ -82,11 +82,11 @@ namespace ConsoleApp1
             /* 10- Stringin bütün hərflərini əvvəlcə böyük, daha sonra kiçik hərflərə dəyişin.*/
 
             string numune12 = "Kod yazmaga baslayanda sanki dunya qaralib ustune cokur";
-            var numune2= numune12.ToLower();
+            var numune2 = numune12.ToLower();
             Console.WriteLine(numune2);
 
             /* 11-	String daxilində ilk və son a hərfinin indexini ekrana yazdırın.*/
-            
+
             string sabi = "Havalar getdikce soyusa da shaxta hele ki yoxdur.";
             var sa = sabi.IndexOf("a");
             Console.WriteLine(sa);
@@ -103,7 +103,7 @@ namespace ConsoleApp1
             /* 13-String 3-cü indexdən 5-ci indexə qədər olan hissəsini kəsin. */
 
             string strn = "Axsam teatra getmek daha maraqli olur";
-            var str8 = strn.Substring(3,5);
+            var str8 = strn.Substring(3, 5);
             Console.WriteLine(str8);
 
             /*string strn = "Axsam teatra getmek daha maraqli olur";
@@ -111,13 +111,14 @@ namespace ConsoleApp1
             Console.WriteLine(str13);*/
 
 
-            /* 14-String dəyərin 3-cü simvoldan sona qədər, daha sonra isə əldə edilmiş dəyərdən 2-ci simvoldan 4 simvol sonraya qədər kəsin və nəticəni ekrana yazdırın.*/
+            /* 14-String dəyərin 3-cü simvoldan sona qədər, 
+             * daha sonra isə əldə edilmiş dəyərdən 2-ci simvoldan 4 simvol sonraya qədər kəsin və nəticəni ekrana yazdırın.*/
 
-            string str="hesabatlar bugun aparilmalidir";
+            string str = "hesabatlar bugun aparilmalidir";
             Console.WriteLine(str);
-            var str2 = str.Substring(3,str.Length-3);
+            var str2 = str.Substring(3, str.Length - 3);
             Console.WriteLine(str2);
-            var str3 = str2.Substring(2,4);
+            var str3 = str2.Substring(2, 4);
             Console.WriteLine(str3);
 
             /*string str="hesabatlar bugun aparilmalidir";
@@ -129,7 +130,7 @@ namespace ConsoleApp1
 
             /* 15-Datetime-in metodlarına aid nümunələr yazın.*/
 
-            DateTime time5 = new DateTime(1999,01, 27,12,6,2);
+            DateTime time5 = new DateTime(1999, 01, 27, 12, 6, 2);
             DateTime time6 = time5.AddDays(4);
             DateTime time7 = time5.AddYears(23);
             DateTime time8 = time5.AddHours(6);
@@ -203,17 +204,17 @@ namespace ConsoleApp1
 
             int dyr = 2701;
             int dry = 1005;
-            Console.WriteLine(dyr*dry);
+            Console.WriteLine(dyr * dry);
 
             /* 26-	Int tipindən 2 variable təyin edin və dəyər assign edin. Daha sonra ekrana birinci ədədin ikinci ədədə bölünməsindən alınan qalığı yazdırın.*/
 
             int dyr21 = 13;
             int dry23 = 3;
-            Console.WriteLine(dyr21 %dry23);
+            Console.WriteLine(dyr21 % dry23);
 
             /* 27- Istifadeciye sual verinki nece yasin var. Ekrana onun yasi ile oz yasiniz arasinda ferqi yazdirin.*/
-            
-            int age_me = 23; 
+
+            int age_me = 23;
             Console.WriteLine("Senin neçe yaşin var? ");
             string userInput = Console.ReadLine();
             int ferq = age_me - int.Parse(userInput);
@@ -232,5 +233,6 @@ namespace ConsoleApp1
             string userinput4 = Console.ReadLine();
             Console.WriteLine($"{userinput1} {userinput2} {userinput3} {userinput4}");
         }
+
     }
 }
