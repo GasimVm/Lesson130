@@ -7,7 +7,8 @@ namespace Lesson130
     {
         static void Main(string[] args)
         {
-
+            //test1
+            //test2
             #region
             //1
             /*  Console.WriteLine("eded daxil et ");
