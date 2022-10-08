@@ -198,9 +198,18 @@ namespace Lesson130
             //}
 
             #endregion
-            #region Task 16 bosh
+            #region Task 16
 
-
+            //Console.WriteLine("Deyer daxil edin : ");
+            //string a = Console.ReadLine();
+            //int inta;
+            //bool tryparse = int.TryParse(a, out inta);
+            //if (tryparse == true)
+            //{
+            //    Console.WriteLine("Siz eded daxil etmisiz");
+            //}
+            //else
+            //    Console.WriteLine("Siz metn daxil etmisiz ");
 
             #endregion
 
