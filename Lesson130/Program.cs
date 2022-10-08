@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace Lesson130
 {
@@ -6,13 +7,9 @@ namespace Lesson130
     {
         static void Main(string[] args)
         {
-            // impilicit
-            //int i = 5;
-            //double dv = i;
-
-            //// expilicit
-            //double dbl = 45.8;
-            //int num =(int) dbl;
+           
+            try
+            {
 
             //// unboxing
             //object obj = "56";
