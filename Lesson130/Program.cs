@@ -9,7 +9,7 @@ namespace taprisig
 
 
 
-
+            Console.WriteLine("salam");
             #region t1
 
             var task1 = Console.ReadLine();
