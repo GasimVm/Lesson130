@@ -1,6 +1,8 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.Xml.Schema;
 
-namespace taprisig
+namespace ht_for_l5
 {
     internal class Program
     {
@@ -8,269 +10,449 @@ namespace taprisig
         {
 
 
+            //  #region task1
 
+            //  String equals-a aid nümunə yazın.
 
-            #region t1
+            // var t1 = Console.ReadLine().ToLower();
+            //  var t01 = Console.ReadLine().ToLower();
+            //  bool t02 = t1.Equals(t01);
+            //  Console.WriteLine(t02);
 
-            var task1 = Console.ReadLine();
-            Console.WriteLine(task1.TrimStart());
 
-            #endregion
+            //  #endregion
 
 
-            #region t2
+            //  #region task2
 
-            var task2 = Console.ReadLine().ToLower();
+            //  String metodlarına aid nümunələr yazın.
 
-            if (task2.Contains('e') && task2.Contains('q'))
-            {
-                Console.WriteLine("cannot enter e or q symbol");
-            }
+            // var t2 = Console.ReadLine().Trim().ToLower().Substring(0, 2).IndexOf('a');
+            //  Console.WriteLine(t2);
 
-            else
-            {
-                Console.WriteLine(task2);
-            }
+            //  #endregion
 
-            #endregion
+            //  #region task3
+            //  Datatime - i müxtəlif formatlı stringlər şəklində ekrana yazdırın. (longDateString, longTimeString, shortDateString, shortTimeString, dd / MMM / yyyy hh: mm)
 
+            //  DateTime dt3 = DateTime.Now;
+            //  var dtt3 = dt3.ToLongDateString; //  Error CS8773  Feature 'inferred delegate type' is not available in C# 9.0. Please use language version 10.0 or greater.	
+            //  var dttt3 = dt3.ToLongTimeString();
+            //  var dtttt3 = dt3.ToString("dd MMM yyyy hh:mm");
+            //  Console.WriteLine(dt3);
+            //  Console.WriteLine(dttt3);
+            //  Console.WriteLine(dtttt3);
 
-            #region t3
 
-            var task3 = Console.ReadLine();
-            task3 = task3.Replace(" ", "").ToUpper();
-            Console.WriteLine(task3);
+            //  #endregion
 
-            #endregion
+            //  #region task4
+            //  İf, else if və else üçün nümunələr yazın.
 
-            #region t4
+            //var t4 = int.Parse(Console.ReadLine());
+            //  if (t4 > 0)
+            //  {
+            //      Console.WriteLine("musbet eded");
+            //  }
+            //  else if (t4 < 0)
+            //  {
+            //      Console.WriteLine("menfi eded");
+            //  }
 
-            var task4 = Console.ReadLine();
+            //  else
+            //  {
+            //      Console.WriteLine("0");
+            //  }
 
-            if (task4.Length >= 7)
-            {
-                Console.WriteLine(task4.Substring(2, 5));
-            }
+            //  #endregion
 
-            else
-            {
-                Console.WriteLine("can not execute operation");
-            }
 
-            #endregion
+            //  #region task5
 
 
-            #region t5
+            //  Switch operatoru üçün nümunə yazın.
 
-            var task5 = Console.ReadLine();
+            // var t5 = int.Parse(Console.ReadLine());
 
-            if (task5 == null || task5 == " ")
-            {
-                Console.WriteLine("value can not be empty or whitespace");
-            }
+            //  switch (t5)
+            //  {
+            //      case 0:
+            //          Console.WriteLine("1ci duz cavab");
+            //          break;
 
 
-            #endregion
+            //      case 1:
+            //          Console.WriteLine("2-ci dyz cavab");
+            //          break;
 
+            //      default:
+            //          Console.WriteLine("sehv cavab");
+            //          break;
+            //  }
 
-            #region t6
+            //  #endregion
 
-            const string task6 = "salam";
-            Console.WriteLine(task6);
 
-            #endregion
+            //  #region task6
 
-            #region t7
+            //  Break və continue üçün nümunə yazın.
+            //  var t6 = int.Parse(Console.ReadLine());
+            //  for (int i = 1; i < t6; i++)
+            //  {
 
-            Random t7 = new Random();
-            int task7 = t7.Next(100);
+            //      if (i % 10 != 0)
+            //      {
+            //          Console.WriteLine($"Yuvarlag olmayan eded: {i}");
+            //          continue;
+            //      }
 
-            Console.WriteLine(task7);
-            #endregion
+            //      else if (i % 50 == 0)
+            //      {
+            //          Console.WriteLine($"50e bolunen ilk eded: {i}");
+            //          break;
+            //      }
 
+            //  }
 
-            #region t8
 
-            Random t8 = new Random();
-            var task8 = t8.Next(10, 2333);
+            //  #endregion
 
-            Console.WriteLine(task8);
-            #endregion
 
-            #region t9
+            //  #region task7
 
-            Guid t9 = Guid.NewGuid();
 
-            Console.WriteLine(t9);
-            #endregion
+            //  For üçün nümunə yazın. 
+            //  for (int i = 0; i < 100; i += 3)
+            //      Console.WriteLine(i);
 
+            //  #endregion
 
-            #region t10
 
-            var t10 = int.Parse(Console.ReadLine());
+            //  #region task8
 
-            if (t10 > 10)
-            {
-                Console.WriteLine("10dan boyuk");
+            //  While üçün nümunə yazın
+            //  int a;
+            //  var t8 = int.Parse(Console.ReadLine());
+            //  while (t8 > 0)
+            //  {
+            //      a = t8 % 10;
+            //      Console.WriteLine(a);
+            //      t8 = t8 / 10;
+            //  }
 
-            }
-            else if (t10 < 10)
-            {
-                Console.Write("10dan kicik");
-            }
+            //  #endregion
 
-            else
-            {
-                Console.WriteLine("10a beraber");
-            }
+            //  #region task9
 
-            #endregion
+            //  var t10 = int.Parse(Console.ReadLine());
+            //  do
+            //  {
+            //      t10--;
+            //      Console.WriteLine(t10);
+            //  }
+            //  while (t10 > 10);
 
 
-            #region t11
 
-            var t11 = Console.ReadLine();
 
-            if (t11.Length > 6)
-            {
-                Console.WriteLine("6dan boyuk");
-            }
-            else if (t11.Length < 6)
-            {
-                Console.WriteLine("6dan kicik");
-            }
+            //  #endregion
 
-            else
-            {
-                Console.WriteLine("6a beraber");
-            }
 
-            #endregion
+            //  #region task10-11
+            //  Converting və parsing üçün nümunə yazın.
+            //   Tryparse üçün nümunə yazın.
+            //  var a = Console.ReadLine();
+            //  var a1 = Convert.ToInt32(a);
+            //  var a2 = int.Parse(a);
+            //  var a3 = int.TryParse(a, out a1);
+            //  Console.WriteLine(a1);
+            //  Console.WriteLine(a2);
+            //  Console.WriteLine(a3);
 
-            #region t12
 
-            var t12 = int.Parse(Console.ReadLine());
 
-            if (t12 == 6 || t12 == 7)
-            {
-                Console.WriteLine("duzgun cavab");
-            }
-            else
-            {
-                Console.WriteLine("yanlis cavab");
-            }
+            //  #endregion
 
-            #endregion
+            //  #region task12
 
+            //  İstifadəçidən alınmış string dəyəri tərsinə yazdırın.
 
-            #region t13
+            //  #endregion
 
-            var t13 = int.Parse(Console.ReadLine());
+            //  #region task13
+            //  var s = 0;
+            //  var t13 = int.Parse(Console.ReadLine());
+            //  var tyedek = t13;
+            //  int t013;
 
-            if (t13 > 20)
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
+            //  while (t13 > 0)
+            //  {
+            //      t013 = t13 % 10;
+            //      s = s * 10 + t013;
+            //      t13 = t13 / 10;
+            //  }
 
-            else if (t13 >= 10)
-            {
-                Console.WriteLine("10-20 araligi");
-            }
+            //  if (tyedek == s)
+            //  {
+            //      Console.WriteLine("polindrom");
+            //  }
+            //  else
+            //  {
+            //      Console.WriteLine("not polindrom");
+            //  }
 
-            else if (t13 >= 1)
-            {
-                Console.WriteLine("1-10araligi");
-            }
-            else
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
 
-            #endregion
 
 
+            //  #endregion
 
-            #region t14
+            //  #region task14
+            //  Istidadəçidən int dəyər daxil etməsi istənilsin.Daxil edilmiş ədədin sadə və ya mürəkkəb olduğunu tapın.
+            //  var a = int.Parse(Console.ReadLine());
+            //  for (int i = 2; i < a; i++)
+            //  {
 
-            var t14 = int.Parse(Console.ReadLine());
+            //      if (a % i == 0)
+            //      {
+            //          Console.WriteLine("murekkeb eded");
+            //          break;
+            //      }
+            //      else if (i == a - 1)
+            //      {
+            //          Console.WriteLine("sade eded");
+            //      }
 
-            if (t14 % 2 == 0)
-            {
-                Console.WriteLine("cut eded");
-            }
+            //  }
 
-            else
-            {
-                Console.WriteLine("tek eded");
-            }
 
-            #endregion
 
 
-            #region t15
+            //  #endregion
 
-            Random t15 = new Random();
-            int task15 = t15.Next(100);
 
-            if (task15 > 50)
-            {
-                Console.WriteLine(task15);
-            }
-            else
-            {
-                Console.WriteLine("50den kicik eded");
-            }
+            //  #region task15
 
-            #endregion
+            //  Istidadəçidən int dəyər daxil etməsi istənilsin.Daxil edilmiş ədədin bölənlərini ekrana yazdırın.
+            //  var a = int.Parse(Console.ReadLine());
 
+            //  for (int i = 1; i <= a; i++)
+            //  {
+            //      if (a % i == 0)
+            //      {
+            //          Console.WriteLine(i);
+            //      }
+            //  }
+            //  #endregion
 
-            #region t16
 
-            var t16 = int.Parse(Console.ReadLine());
+            //  #region task 16
+            //  10 iterasiyalı dövr daxilində istifadəçidən number daxil etməsini istəyin. İterasiyanın sonunda daxil edilmiş ən böyük ədəd ekrana yazdırılsın.
+            //  var a = int.Parse(Console.ReadLine());
 
-            var tc = t16 % 2 == 0 ? "cut eded" : "tek eded";
+            //  for (int i = 0; i < a; i += 10)
+            //  {
+            //      if (i + 10 >= a)
+            //      {
+            //          Console.WriteLine(i);
+            //      }
+            //  }
 
-            Console.WriteLine(tc);
-            #endregion
 
+            //  #endregion
 
+            //  #region task1
+            //  Random r = new Random();
+            //  int m = r.Next(100);
+            //  Console.WriteLine(m);
 
-            #region t17 
+            //  var a = int.Parse(Console.ReadLine());
 
-            var t17 = Console.ReadLine();
-            var t171 = t17.Substring(1);
-            var t172 = t17.Substring(0, 1);
+            //  for (int i = 1; i < a; i++)
+            //  {
 
-            if (t171.Contains('t') && t172.Contains('t'))
-            {
-                Console.WriteLine("birden cox t var");
-            }
-            else if (t171.Contains('t') || t172.Contains('t'))
-            {
-                Console.WriteLine("bir eded t var");
-            }
-            else
-            {
-                Console.WriteLine("t herfi yoxdur");
-            }
-            #endregion
+            //      Random random = new Random();
+            //      int rdn = random.Next(100);
+            //      Console.WriteLine(rdn);
+            //      if (m > rdn)
+            //      {
+            //          m = rdn;
 
+            //      }
 
 
-            #region t17 st2
+            //  }
+            //  Console.WriteLine($"en kicik random eded {m}");
 
-            var t170 = Console.ReadLine();
+            //  #endregion
 
-            if (t170.LastIndexOf('t') == t170.IndexOf('t'))
-            {
-                Console.WriteLine("tek t herfi var");
-            }
-            else
-            {
-                Console.WriteLine("Birden cox t var");
-            }
+            //  #region task2
 
-            #endregion
+            //  Random r = new Random();
+            //  int m = r.Next(100);
+            //  Console.WriteLine(m);
+
+            //  var a = int.Parse(Console.ReadLine());
+
+            //  for (int i = 1; i < a; i++)
+            //  {
+
+            //      Random random = new Random();
+            //      int rdn = random.Next(100);
+            //      Console.WriteLine(rdn);
+            //      if (m < rdn)
+            //      {
+            //          m = rdn;
+
+            //      }
+
+
+            //  }
+            //  Console.WriteLine($"en boyuk random eded {m}");
+
+            //  #endregion
+
+            //  #region task3
+            //  Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra həmən sayda random ədəd generasiya edilsin və ədədlərin 2 mislinin cəmini hesablayın.
+            //  int s = 0;
+            //  var a = int.Parse(Console.ReadLine());
+
+            //  for (int i = 0; i < a; i++)
+            //  {
+            //      Random r = new Random();
+            //      int r1 = r.Next(100);
+            //      Console.WriteLine(r1);
+            //      s = s + r1;
+            //  }
+            //  Console.WriteLine(2 * s);
+
+            //  #endregion
+
+            //  #region task4
+
+            //  Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra həmən sayda 0 - 100 arası random ədəd generasiya edilsin və ədədlər içərisində 3 - ə və 5 - ə bölünənlərin hasilini tapın.
+
+            //  int s = 1;
+            //  var a = int.Parse(Console.ReadLine());
+
+            //  for (int i = 0; i < a; i++)
+            //  {
+            //      Random r = new Random();
+            //      int r1 = r.Next(100);
+            //      Console.WriteLine(r1);
+            //      if (r1 % 15 == 0)
+            //      {
+            //          s = s * r1;
+            //      }
+            //  }
+            //  Console.WriteLine(s);
+            //  #endregion
+
+            //  #region task5
+
+            //  İstifadəçidən string dəyər daxil edilməsi tələb edilsin. Bu proses istifadəçi polindrom ədəd daxil edənə kimi davam etsin.
+            //  int s = 0;
+            //  var a = int.Parse(Console.ReadLine());
+            //  var b = a;
+            //  while (a > 0)
+            //  {
+            //      s = s * 10 + a % 10;
+            //      a = a / 10;
+
+            //  }
+
+
+
+
+
+            //  #endregion
+
+
+
+            //  #region task6
+
+            //  0 - dan 100 - ə kimi ədədlərin ekrana yazdırın. İlk 22 - ə bölünən ədədlər ekrana yazdırılmasın. Bunu continue ilə həll edin.
+            //  for (int i = 0; i < 100; i++)
+            //  {
+            //      if (i % 22 != 0)
+            //          Console.WriteLine(i);
+            //      continue;
+            //  }
+            //  #endregion
+
+            //  #region task7
+            //  Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra istifadəçidən həmən sayda string daxil etməsi istənilsin və sonda stringlərin uzunluqları cəmini ekrana yazdırın.
+            //  var a = int.Parse(Console.ReadLine());
+            //  var s = 0;
+            //  for (int i = 0; i < a; i++)
+            //  {
+            //      var b = Console.ReadLine();
+            //      s = s + b.Length;
+            //  }
+            //  Console.WriteLine(s);
+
+            //  #endregion
+
+            //  #region task8
+            //  String format və interpolationa aid nümunələr yazın.
+
+
+
+
+            //  #endregion
+
+            //  #region task9
+
+            //   İstifadəçinin daxil etdiyi dəyərin int olub-olmadığını yoxlayın.
+            //  var a = Console.ReadLine();
+            //  int b;
+            //  var str = int.TryParse(a, out b);
+            //  Console.WriteLine(str);
+
+            //  #endregion
+
+
+            //  #region task10
+
+            //  İstifadəçidən alınmış inputu int-ə çevirin və ekrana yazdırın. Növbəti sətirlərdə isə proqramda xəta olub-olmamasından asılı olmayaraq ekrana “Hello world” yazdırılsın.
+            // var a = Console.ReadLine();
+            //  int b;
+            //  var str = int.TryParse(a, out b);
+            //  if (str)
+            //  {
+            //      Console.WriteLine(a);
+            //  }
+            //  else
+            //  {
+            //      Console.WriteLine("stringi cevirmek mumkun deil");
+            //  }
+            //  Console.WriteLine("Hello World");
+
+
+            //  #endregion
+
+
+            //  #region task11
+
+            //  var a = int.Parse(Console.ReadLine());
+            //  var b = int.Parse(Console.ReadLine());
+
+            //  try
+            //  {
+            //      a = a / b;
+            //      Console.WriteLine(a);
+            //  }
+            //  catch (Exception ex)
+            //  {
+            //      Console.WriteLine("xeta bas verdi");
+            //  }
+            //  finally
+            //  {
+            //      Console.WriteLine("kodun sonu");
+            //  }
+
+            //  #endregion
+
         }
     }
 }
+
