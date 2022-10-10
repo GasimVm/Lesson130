@@ -5,49 +5,110 @@ namespace Lesson130
     class Program
     {
         static void Main(string[] args)
-        {
-            // impilicit
-            //int i = 5;
-            //double dv = i;
-            //test
-            //// expilicit
-            //double dbl = 45.8;
-            //int num =(int) dbl;
+        { //1) Equalsa numune
 
-            //// unboxing
-            //object obj = "56";
-            //int number =(int) obj;
-            //// boxing
-            //double dbl2 = 45.7;
-            //object obj2 = dbl2;
+            //string a = "Aysu";
+            //string b = "Aysu";
+            //if (a.Equals(b))
+            //    Console.WriteLine("eyni");
+            //else
+            //    Console.WriteLine("eyni  deyil");
 
-            // Random random = new Random();
-            // int ramEded = random.Next(25,50);
-            //// Console.WriteLine(ramEded);
 
-            // Guid guid = Guid.NewGuid();
-            // Console.WriteLine(guid);
-            int x = 3;
-            int y = 35;
-            string str = null;
-            // ternary operator
-            //  var rgrfr = y > x ? "" : "";
-            // var  Enboyuk = x > y ? 25.6 : 456.8;
+            //2) stringe aid numuneler
 
-            //null coalescing
-            //   var str2 = str ?? "Null-dir";
-            // Console.WriteLine(Enboyuk);
+            //string str = ("hava gozel ve serindir");
+            //var a = str.IndexOf("ha");
+            //Console.WriteLine(a);
+            //var b = str.Substring(3);
+            //Console.WriteLine(b);
+            //var c = str.Length;
+            //Console.WriteLine(c);
 
-            //if ( y>x  )
+            //3) if elif aid numuneler
+            //int a = 12;
+            //int b = 17;
+            //if(a>b)
             //{
-            //    Console.WriteLine("Ela");
+            //    Console.WriteLine("a b-den boyukdur");
             //}
-            Console.WriteLine("Main TO programcs");
+            //else
+            //{
+            //    Console.WriteLine("a b - den kicikdir");
+            //}
 
-            
+            //4)swich aid numune
+            //    5) break countinue numune
+            //int day = 2;
+            //switch (day)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Bazarertesi");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("cersenbe axsami");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("cersenbe");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("cume axsami");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("cume");
+            //        break;
+            //    case 6:
+            //        Console.WriteLine("sembe");
+            //        break;
+            //    case 7:
+            //        Console.WriteLine("bazar");
+            //        break;
+            //}
+
+            //7) /*for ucun numune*/
+
+            //for (int i = 100; i < 200; i+=3)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
+            ////8)while ucun numune
+            //int i = 0;
+            //while (i < 20) 
+            //{
+            //    Console.WriteLine(i);
+            //    i += 2;
+            //}
+
+            //9) do while aid numune
+
+            //int i = 0;
+
+            //do
+            //{
+            //    Console.WriteLine( i);
+            //    i++;
+
+            //} while (i < 20);
+
+            //10) Parse numune convert numune
+            //string str = "A";
+            //char a = char.Parse(str);
+            //Console.WriteLine(a);
+
+
+            //double d = 433.4;
+            //int i;
+            //i = (int)d;
+            //Console.WriteLine(i);
+
+            //int a = Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("eded daxil edin");
+
+
 
         }
-         
+
 
     }
 }
