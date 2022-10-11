@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Lesson130
@@ -7,219 +8,418 @@ namespace Lesson130
     {
         static void Main(string[] args)
         {
-            //test1
-            //test2
             #region
-            //1
-            /*  Console.WriteLine("eded daxil et ");
-              int num = Convert.ToInt32(Console.ReadLine());
-
-              Random rand = new Random();
-              int num2 = rand.Next(200);
-              Console.WriteLine(num2+num); */
+            // String equals-a aid nümunə yazın.
+            /*  string str1 = Console.ReadLine();   
+              string str2 = Console.ReadLine();
+              bool check = str1.Equals(str2);
+              Console.WriteLine(check); */
             #endregion
 
             #region
-            //2
-            /* 
-             int result = 0;
-
-             for(int i = 1; i < 21; i++)
-             {
-
-                 result += i * i;
-
-
-             }
-               Console.WriteLine(result);  
-            */
-
-            #endregion
-
-            #region
-            //3
+            //String metodlarına aid nümunələr yazın.
             /*
-            for(int i = 0; i <101 ; i++)
+            string test = Console.ReadLine();
+            Console.WriteLine(test.ToLower());
+            Console.WriteLine(test.Contains('a'));
+            Console.WriteLine(test.Substring(5));
+            */
+            #endregion
+
+            #region
+            //İf, else if və else üçün nümunələr yazın.
+            /*
+            Console.WriteLine("movcud emelyatlar: 1-topla,2-cix,3-vur,4-bol");
+            string cmm = Console.ReadLine();
+            int command;
+            bool result = int.TryParse(cmm, out command);
+            if (result)
             {
-                Console.WriteLine(i);
-            }
-            */
-            #endregion
-
-            #region
-            //4
-            /*
-            for(int i = 0; i <=100; i+=3)
-            {
-                
-                Console.WriteLine(i);
-
-            }
-            */
-            #endregion
-
-            #region
-            //5
-            /*
-            for (int i = 0; i <= 100; i++) 
-                if (i != 36 && i != 67) Console.WriteLine(i);
-            */
-            #endregion
-
-            #region
-            //6
-            /*
-            for (int i = 0; i <= 100; i++)
-                if (i == 17)
+                if (command==1)
                 {
-                    Console.WriteLine("17 e bolunen ilk eded tapildi");
-                    break;
+                    Console.WriteLine("ededleri daxil edin:");
+                    int x1= Convert.ToInt32(Console.ReadLine());
+                    int x2= Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"emelyatin neticesi ={x1+x2}");
                 }
-            */
-            #endregion
-
-            #region
-            //7
-            /*
-            string str = "salam";
-            for (int i=0; i<=100; i++)
+                else if (command==2)
+                {
+                    Console.WriteLine("ededleri daxil edin:");
+                    int x1 = Convert.ToInt32(Console.ReadLine());
+                    int x2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"emelyatin neticesi ={x1 - x2}");
+                }
+                else if (command == 3)
+                {
+                    Console.WriteLine("ededleri daxil edin:");
+                    int x1 = Convert.ToInt32(Console.ReadLine());
+                    int x2 = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine($"emelyatin neticesi ={x1 * x2}");
+                }
+                else if (command == 4)
+                {
+                    Console.WriteLine("ededleri daxil edin:");
+                    int x1 = Convert.ToInt32(Console.ReadLine());
+                    int x2 = Convert.ToInt32(Console.ReadLine());
+                     if (x2!=0)
+                    {
+                        Console.WriteLine($"emelyatin neticesi ={x1 / x2}");
+                    }
+                     else
+                    {
+                        Console.WriteLine("ugursuz emelyat");
+                    }  
+                }
+            }
+            else
             {
-                Console.WriteLine(str + i);
+                Console.WriteLine("emelyati duzgun secin!!!");
             }
             */
             #endregion
 
             #region 
-            //8
+            //Switch operatoru üçün nümunə yazın.
             /*
-            for (int i = 100; i >=0; i--)
+            char cmm = Convert.ToChar(Console.ReadLine());
+            switch (cmm)
             {
-                Console.WriteLine(i);
-
-            }
-            */
-            #endregion
-
-            #region
-            //9
-            /*
-            Console.WriteLine(Math.Cbrt(27));
-            Console.WriteLine(Math.Clamp(10,6,9));
-            Console.WriteLine(Math.BigMul(9,4));
-            Console.WriteLine(Math.CopySign(8,6));
-            Console.WriteLine(Math.MaxMagnitude(6,5));
-            */
-            #endregion
-
-            #region
-            //10
-            /*
-            string str = null;
-            var str1 = str ?? "test";
-            Console.WriteLine(str1);
-            */
-            #endregion
-
-            #region
-            //11
-            /*
-            int number = Convert.ToInt32(Console.ReadLine());
-            if (number==1)
-            {
-                Console.WriteLine("bir") ;
-            }
-            else if (number == 2)
-            {
-                Console.WriteLine("iki");
-            }
-            else if (number==3)
-            {
-                Console.WriteLine("uc");
-            }
-            else
-            {
-                Console.WriteLine("tapilmadi");
-            }
-            */
-            #endregion
-
-            #region
-            //12
-            /*
-            int number = Convert.ToInt32(Console.ReadLine());
-
-            switch (number)
-            {
-                case 1:
-                    Console.WriteLine("bir");
+                case '1':
+                    Console.WriteLine("hava soyuqdu 1");
                     break;
-                case 2:
-                    Console.WriteLine("iki");
-                    break;
-                case 3:
-                    Console.WriteLine("uc");
+                case '2':
+                    Console.WriteLine("hava istidi 2");
                     break;
                 default:
-                    Console.WriteLine("tapilmadi");
-                    break ;
+                    Console.WriteLine("hec biri");
+                    break;
             }
-            */
-            #endregion
-
-            #region 
-            //13
-            /*
-           double? dbl = null;
-           string tdbl = Convert.ToString(dbl);
-           string result = tdbl ?? "nulldur";
-           Console.WriteLine(result);
-            */
+           */
             #endregion
 
             #region
-            //14
+            //Break və continue üçün nümunə yazın.
             /*
-            for (int i = 10; i <=300 ; i+=2)
+            for (int i = 1; i<= 100; i++)
             {
+                if (i==45)
+                {
+                   continue;
+                }
                 Console.WriteLine(i);
             }
             */
             #endregion
 
             #region
-            //15
+            //While üçün nümunə yazın.
             /*
-            for (int i =200; i >=40 ; i-=12)
+            int cmm = Convert.ToInt32(Console.ReadLine());
+            while (cmm > 0 && cmm<11)
             {
-                Console.WriteLine(i);   
+                Console.WriteLine($"commandin indiki qiymeti-{cmm}");
+                cmm++;
             }
             */
             #endregion
 
             #region
-            //16
-            /*
-            string str = Console.ReadLine();
-            int a;
-            var check= int.TryParse(str, out a);
-            if (check == true)
+            //Do while üçün nümunə yazın.
+            /*??????????????????????????????????????????????????
+            int rqm = 0;
+            do
             {
-                Console.WriteLine("siz eded daxil etdiniz ");
+                rqm++;
+            }
+            while (rqm > 0);
+            Console.WriteLine(rqm);
+            */
+            #endregion
+
+            #region
+            //Converting və parsing üçün nümunə yazın.
+            /*
+            int x1 = Convert.ToInt32(Console.ReadLine());
+            string str = "200";
+            int strcheck= int.Parse(str);
+            Console.WriteLine(strcheck);
+            */
+            #endregion
+
+            #region 
+            //İstifadəçidən alınmış string dəyəri tərsinə yazdırın.
+            //???????????????????????????????????????????????????????
+            /*
+            string test = "teymur";
+            string reverse=null;
+            for (int i = test.Length-1; i >=0; i--)
+            {
+                reverse = reverse + test[i];
+            }
+            Console.WriteLine(reverse);
+            */
+            #endregion
+
+            #region
+            //İstifadəçinin daxil etdiyi dəyərin polindrom olub-olmadığını bildirən proqram yazın.
+            /*
+            string input = Console.ReadLine();
+            string check = null;
+            for (int i = input.Length-1; i >=0; i--)
+            {
+                check = check + input[i];
+            }
+            if (check == input)
+            {
+                Console.WriteLine($"daxil etdiyiniz soz polindromdur:input={input},check={check}");
             }
             else
             {
-                Console.WriteLine("siz metn daxil etdiniz");
+                Console.WriteLine($"soz polindrom deyil:input={input},check={check}");    
             }
             */
             #endregion
 
+            #region
+            //Istidadəçidən int dəyər daxil etməsi istənilsin. Daxil edilmiş ədədin sadə və ya mürəkkəb olduğunu tapın.
+            /*
+            int number = Convert.ToInt32(Console.ReadLine());
+            if (number%2==0)
+            {
+                Console.WriteLine("bu eded murekkebdir");
+            }
+            else if (number==1)
+            {
+                Console.WriteLine("1 daxil etdiniz");
+            }
+            else
+            {
+                Console.WriteLine("sade eded daxil etdiniz");
+            }
+            */
+            #endregion
 
+            #region
+            //Istidadəçidən int dəyər daxil etməsi istənilsin. Daxil edilmiş ədədin bölənlərini ekrana yazdırın.
+            /*
+           int number = Convert.ToInt32(Console.ReadLine());
+            for (int i = 1; i <= number; i++)
+            {
+                if (number%i==0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
+            */
+            #endregion
 
-            Console.WriteLine("test"); 
+            #region
+            //10 iterasiyalı dövr daxilində istifadəçidən number daxil etməsini istəyin. İterasiyanın sonunda daxil edilmiş ən böyük ədəd ekrana yazdırılsın.
+            /*
+            int[] array = new int[10];
+            int j=0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                int input = Convert.ToInt32(Console.ReadLine());
+                array[i] = input;
+            }
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[j] >= array[i])
+                {
+                    continue;
+                }
+                else if (array[j] < array[i])
+                {
+                    j=i;
+                } 
+            }
+            int result = array[j];
+            Console.WriteLine(result);
+            */
+            #endregion
 
+            #region
+            //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra həmən sayda random ədəd generasiya edilsin və ədədlər içərisindən minimumunu ekrana yazdırın.
+            /*
+            int loop = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[loop];
+            int j=0;
+            for (int i = 0; i < loop; i++)
+            {
+               Random rand = new Random();
+               int number = rand.Next(1,loop);
+               Console.WriteLine(number);
+               array[i] = number;
+            }
+            for (int i = 1; i < loop; i++)
+            {
+                if (array[j] <= array[i] )
+                {
+                    continue;
+                }
+                else if (array[j] > array[i])
+                {
+                    j = i;
+                }
+            }
+            int result=array[j];
+            Console.WriteLine("bize lazim olan netice"+result);
+            */
+            #endregion
 
+            #region
+            //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra həmən sayda random ədəd generasiya edilsin və ədədlərin 2 mislinin cəmini hesablayın.
+            /*
+            Console.WriteLine("dovr sayini daxil edin:");
+            int loop = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
+            for (int i = 0; i < loop; i++)
+            {
+                Random rdm = new Random();
+                int number = rdm.Next(1,10);
+                Console.WriteLine(number);
+                result= result + number*2;
+            }
+            Console.WriteLine($"ededlerin 2 mislinin ceminin nticesi:{result}");
+            */
+            #endregion
 
-            Console.ReadLine();
+            #region
+            //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra həmən sayda 0-100 arası random ədəd generasiya edilsin və ədədlər içərisində 3-ə və 5-ə bölünənlərin hasilini tapın.
+            /*
+            Console.WriteLine("loop daxil edin: ");
+            int loop = Convert.ToInt32(Console.ReadLine());
+            int result = 1;
+            for (int i = 0; i < loop; i++)
+            {
+                Random rdm=new Random();
+                int number = rdm.Next(1, 100);
+                Console.WriteLine(number);
+                if (number%15==0)
+                {
+                    result=result*number;
+                }
+            }
+            Console.WriteLine($"bize lazim olan netice:{result}");
+            */
+            #endregion
+
+            #region
+            //İstifadəçidən string dəyər daxil edilməsi tələb edilsin. Bu proses istifadəçi polindrom ədəd daxil edənə kimi davam etsin.
+            /* ???????????????????????????????????????????????????????????????????????????????
+            string check = null;
+            string str;
+            try
+            {
+                do
+                {
+                    Console.WriteLine("string deyer daxil edin :");
+                    str = Console.ReadLine();
+                    for (int i = str.Length; i >= 0; i--)
+                    {
+                        check = check + str[i];
+                    }
+                }
+                while (check != str);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("polindrom");
+            }
+            */
+            #endregion
+
+            #region
+            //0-dan 100-ə kimi ədədlərin ekrana yazdırın. İlk 22-ə bölünən ədədlər ekrana yazdırılmasın. Bunu continue ilə həll edin.
+            /*
+            for (int i = 0; i <=100; i++)
+            {
+                if (i%22==0)
+                {
+                    continue;
+                }
+                Console.WriteLine(i);
+            }
+            */
+            #endregion
+
+            #region
+            //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin. Daha sonra istifadəçidən həmən sayda string daxil etməsi istənilsin və sonda stringlərin uzunluqları cəmini ekrana yazdırın.
+            /*
+            Console.WriteLine("loop sayi daxil edin:");
+            int loop = Convert.ToInt32(Console.ReadLine());
+            int result = 0;
+            for (int i = 0; i < loop; i++)
+            {
+                Console.WriteLine("string deyer daxil edin:");
+                string str= Console.ReadLine();
+                result= result + str.Length;
+            }
+            Console.WriteLine($"bize lazim olan netice:{result}");
+            */
+            #endregion
+
+            #region
+            //İstifadəçinin daxil etdiyi dəyərin int olub-olmadığını yoxlayın.
+            /*
+            Console.WriteLine("her hansi bir input daxil edin:");
+            string str= Console.ReadLine();
+            int number;
+            bool check=int.TryParse(str, out number);
+            if (check)
+            {
+                Console.WriteLine($"siz integer deyer daxil etduiniz:{number}");
+            }
+            else
+            {
+                Console.WriteLine($"siz string deyer daxil etiniz:{str}");
+            }
+            */
+            #endregion
+
+            #region
+            //İstifadəçidən alınmış inputu int-ə çevirin və ekrana yazdırın. Növbəti sətirlərdə isə proqramda xəta olub-olmamasından asılı olmayaraq ekrana “Hello world” yazdırılsın. 
+            /*
+            string str = Console.ReadLine();
+            int number;
+            bool check =int.TryParse(str, out number);
+            try
+            {
+                if (check)
+                {
+                    Console.WriteLine($"siz integer deyer daxil etduiniz:{number}");
+                }
+                else
+                {
+                    Console.WriteLine($"siz string deyer daxil etiniz:{str}");
+                }
+            }
+            catch(Exception ex)
+            {
+
+            }
+            finally
+            {
+                Console.WriteLine("Hello World");
+            }
+            */
+            #endregion
+
+            #region
+            //İstifadəçidən ədəd daxil etməsini tələb edin və daha sonra ədədin rəqəmlərini ayrı-ayrılıqda ekrana yazdırın. (məsələn: 45232 -> 4 5 2 3 2)
+            /*
+            int number = Convert.ToInt32(Console.ReadLine());
+            string str= Convert.ToString(number);
+            string result = null;
+            for (int i = str.Length; i >=0; i--)
+            {
+                result = result + str[i];  //System.IndexOutOfRangeException: 'Index was outside the bounds of the array.'- bele error aliram 
+            }
+            Console.WriteLine($"bize lazim olan netice: \n {result}");
+            */
+            #endregion
+            Console.ReadLine(); 
         }
 
     }
