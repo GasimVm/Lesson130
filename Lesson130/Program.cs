@@ -44,7 +44,7 @@ namespace Lesson130
             //{
             //    Console.WriteLine("Ela");
             //}
-            int number = 16;
+            //int number = 16;
             #region switch goto
             //switch (number)
             //{
@@ -82,41 +82,107 @@ namespace Lesson130
             //    Console.WriteLine(number);
             //    number--;
             //}
-            int result = 0;
-            for (int i = 1; i <= 100; i++)
-            {
-                if (i%33==0)
-                {
-                    result++;
-                    continue;
-                }
-                 
-                Console.WriteLine(i);
-            }
-            Console.WriteLine("say"+result);
+            //int result = 0;
+            //for (int i = 1; i <= 100; i++)
+            //{
+            //    if (i%33==0)
+            //    {
+            //        result++;
+            //        continue;
+            //    }
+
+            //    Console.WriteLine(i);
+            //}
+            //Console.WriteLine("say"+result);
 
             //do
             //{
             //    Console.WriteLine(number);
             //    number--;
             //} while (number > 12);
-            int b = 5;
-            b = 15;
+            //int b = 5;
+            //b = 15;
             //string name = "Nurlan";
             //name += " Xankisiyev";
             //StringBuilder stringBuilder = new StringBuilder();
             //stringBuilder.Append("Teymur");
             //stringBuilder.Append(" Memmed");
             //Console.WriteLine(stringBuilder.ToString());
-        //    for (int i = 1; i < 100; i++)
-        //    {
-        //        if (i%17==0)
-        //        {
-        //            Console.WriteLine("ilk 17-e bolunewn"+i);
-        //            break;
-        //        }
-        //        Console.WriteLine(i);
-        //    }
+            //    for (int i = 1; i < 100; i++)
+            //    {
+            //        if (i%17==0)
+            //        {
+            //            Console.WriteLine("ilk 17-e bolunewn"+i);
+            //            break;
+            //        }
+            //        Console.WriteLine(i);
+            //    }
+
+            //string str = Console.ReadLine();
+            //if (str==null || str==" ")
+            //{
+            //    Console.WriteLine("is null or whitespace");
+            //}
+
+            //Console.WriteLine(str??"is null");
+
+            //if (String.IsNullOrWhiteSpace(str))
+            //{
+            //    Console.WriteLine("is null or whitespace");
+            //}
+            //int number = Int32.Parse(Console.ReadLine());
+            //int sum = 0;
+            //int r = 0;
+            //Random random = new Random();
+            //for (int i = 0; i < number; i++)
+            //{
+            //    r = random.Next(200);
+            //    Console.WriteLine(r);
+            //    sum = sum + r;
+            //}
+            //Console.WriteLine("yekun netice: "+sum);
+
+            //double? dbl = null;
+            //var test = dbl.ToString() ?? "nulldur";
+            //Console.WriteLine(test);
+
+            //string str = "salam";
+            //string strOld = str;
+            //for (int i = 0; i < 1000; i++)
+            //{
+            //    str += $"iteration number {i} ";
+            //}
+            // Console.WriteLine(num );
+            //int[] array  = { 56,6,78,98,2};
+            //string[] arrayStr  = { "salam","netersen","ne "};
+            //string str = "Salam";
+            //var strNew = str.Split(" ");
+            //var strChar = str.ToCharArray();
+            //foreach (var item in strChar)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //bool check = true;
+            //while (check)
+            //{
+            //    if( )
+            //    {
+            //        check = false;
+            //    }
+            //}
+            int eded = Convert.ToInt32(Console.ReadLine());
+            
+            Random random = new Random();
+            int min = random.Next();//56
+            for (int i = 0; i < eded-1; i++)
+            {
+                int newNum = random.Next();//45 /6767
+                if (newNum<min)
+                {
+                    min = newNum;
+                }
+            }
+            Console.WriteLine(min);
         }
 
         static int  DoOperation(int op, int a, int b)
