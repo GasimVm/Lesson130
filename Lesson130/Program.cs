@@ -1,6 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Linq;
+using System.Xml.Linq;
 
-namespace taprisig
+namespace ht_for_l6
 {
     internal class Program
     {
@@ -8,269 +11,256 @@ namespace taprisig
         {
 
 
+            #region task1 
+            //İstifadəçidən number formatlı dəyər daxil edilməsi istənilsin.
+            // Daxil edilmiş dəyər qədər 0 - la 200 arasında ədəd generasiya olunsun və bu ədədlərin cəmi ekrana yazdırılsın.
+
+            //var a= int.Parse(Console.ReadLine());
+            //var s = 0;
+
+            //for(int i = 0; i < a; i++)
+            //{
+            //    Random random = new Random();
+            //    int rdn = random.Next(200);
+            //    s = s + rdn;
 
 
-            #region t1
+            //}
 
-            var task1 = Console.ReadLine();
-            Console.WriteLine(task1.TrimStart());
-
-            #endregion
-
-
-            #region t2
-
-            var task2 = Console.ReadLine().ToLower();
-
-            if (task2.Contains('e') && task2.Contains('q'))
-            {
-                Console.WriteLine("cannot enter e or q symbol");
-            }
-
-            else
-            {
-                Console.WriteLine(task2);
-            }
+            //Console.WriteLine(s);
 
             #endregion
 
 
-            #region t3
+            #region task2
 
-            var task3 = Console.ReadLine();
-            task3 = task3.Replace(" ", "").ToUpper();
-            Console.WriteLine(task3);
+            // 1-dən 20-ə kimi  ədədlərin kvadları cəmi ekrana yazdırılsın.
+            //var s = 0; 
 
-            #endregion
+            //for(int i = 0; i < 20; i++)
+            //{
+            //    s = s + i*i;
+            //}
 
-            #region t4
-
-            var task4 = Console.ReadLine();
-
-            if (task4.Length >= 7)
-            {
-                Console.WriteLine(task4.Substring(2, 5));
-            }
-
-            else
-            {
-                Console.WriteLine("can not execute operation");
-            }
-
+            //Console.WriteLine(s);
             #endregion
 
 
-            #region t5
-
-            var task5 = Console.ReadLine();
-
-            if (task5 == null || task5 == " ")
-            {
-                Console.WriteLine("value can not be empty or whitespace");
-            }
+            #region task3
+            // Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra arrayin max elementi ekrana yazdırılsın.
 
 
+            //var a = int.Parse(Console.ReadLine());
+            // int[] b = new int[a];
+
+            // for(int i = 0; i < a; i++)
+            // {
+            //     b[i] = int.Parse(Console.ReadLine());
+            // }
+
+            // Console.WriteLine(b.Max());
             #endregion
 
 
-            #region t6
+            #region task4
 
-            const string task6 = "salam";
-            Console.WriteLine(task6);
+            // 10 elementli array yaradılsın və element dəyərləri arrayi yaradarkən verilsin. Daha sonra arrayin minimum elementi ekrana yazdırılsın.
 
-            #endregion
+            //int [] b  =  { 0, 1, 2, 3, 4, 5, 6, 7, 8 , 9 };
 
-            #region t7
-
-            Random t7 = new Random();
-            int task7 = t7.Next(100);
-
-            Console.WriteLine(task7);
-            #endregion
-
-
-            #region t8
-
-            Random t8 = new Random();
-            var task8 = t8.Next(10, 2333);
-
-            Console.WriteLine(task8);
-            #endregion
-
-            #region t9
-
-            Guid t9 = Guid.NewGuid();
-
-            Console.WriteLine(t9);
-            #endregion
-
-
-            #region t10
-
-            var t10 = int.Parse(Console.ReadLine());
-
-            if (t10 > 10)
-            {
-                Console.WriteLine("10dan boyuk");
-
-            }
-            else if (t10 < 10)
-            {
-                Console.Write("10dan kicik");
-            }
-
-            else
-            {
-                Console.WriteLine("10a beraber");
-            }
+            //Console.WriteLine(b.Min());
 
             #endregion
 
+            #region task5
+            // Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra arrayin tək elementləri ekrana yazdırılsın.
 
-            #region t11
+            //var a =int.Parse(Console.ReadLine());
+            //int[] b = new int[a];
 
-            var t11 = Console.ReadLine();
+            //for(int i = 0; i < a; i++)
+            //{
+            //    b[i] = int.Parse(Console.ReadLine());
+            //}
 
-            if (t11.Length > 6)
-            {
-                Console.WriteLine("6dan boyuk");
-            }
-            else if (t11.Length < 6)
-            {
-                Console.WriteLine("6dan kicik");
-            }
-
-            else
-            {
-                Console.WriteLine("6a beraber");
-            }
-
-            #endregion
-
-            #region t12
-
-            var t12 = int.Parse(Console.ReadLine());
-
-            if (t12 == 6 || t12 == 7)
-            {
-                Console.WriteLine("duzgun cavab");
-            }
-            else
-            {
-                Console.WriteLine("yanlis cavab");
-            }
-
+            //foreach(var item in b)
+            //{
+            //    if(item%2==1)
+            //        Console.WriteLine(item);
+            //}
             #endregion
 
 
-            #region t13
+            #region task 6
 
-            var t13 = int.Parse(Console.ReadLine());
+            // Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra hər bir elementin dəyəri 2misli ilə əvəz edilərək ekrana yazdırılsın.
+            //var a = int.Parse(Console.ReadLine());
+            //int[] b = new int[a];
+            //var c = 0;
+            //for (int i = 0; i < a; i++)
+            //{
+            //    b[i] = int.Parse(Console.ReadLine());
+            //}
 
-            if (t13 > 20)
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
+            //for(int i = 0; i < b.Length; i++)
+            //{
+            //    c=b[i];
+            //    Console.WriteLine(c*2);
+            //}
 
-            else if (t13 >= 10)
-            {
-                Console.WriteLine("10-20 araligi");
-            }
-
-            else if (t13 >= 1)
-            {
-                Console.WriteLine("1-10araligi");
-            }
-            else
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
 
             #endregion
 
 
 
-            #region t14
+            #region task7
 
-            var t14 = int.Parse(Console.ReadLine());
 
-            if (t14 % 2 == 0)
-            {
-                Console.WriteLine("cut eded");
-            }
+            //var a = int.Parse(Console.ReadLine());
+            //string[] b =new string[a];
 
-            else
-            {
-                Console.WriteLine("tek eded");
-            }
+            //for(int i = 0; i < b.Length; i++)
+            //{
+            //    b[i] = Console.ReadLine();  
+            //}
+
+            //foreach(var item in b)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
+            #region task8
+
+            //6 elementli integer arrayi yaradılsın və istifadəçidən onun dəyərlərinin daxil edilməsi tələb edilsin. Daha sonra yaranmış arrayi artan sıra ilə düzüb ekrana yazın. (Array.Sort ilə yox, alqoritmi yazın).
+
+
+            //int[] a = new int[6];
+            //var t = 0;
+            //for(var i = 0; i<6; i++)
+            //{
+            //    a[i]= int.Parse(Console.ReadLine());
+
+            //}
+
+            //for(var i = 0; i<6; i++)
+            //{
+            //for(var j = i+1; j<6; j++)
+            //    {
+            //        if (a[i] > a[j])
+            //        {
+            //            t=a[i];
+            //            a[i]=a[j];
+            //            a[j]=t;
+            //        }
+            //    }
+            //}
+
+
+            //for(var i = 0; i<6; i++)
+            //{
+            //    Console.WriteLine(a[i] + " ");
+            //}
+
+
+            #endregion
+
+            #region task9
+
+            //int a= int.Parse(Console.ReadLine());
+            //int[] b = new int[a];
+            //for (int i = 0; i < a; i++)
+            //{
+            //    b[i] = int.Parse(Console.ReadLine());
+            //}
+
+            //try
+            //{    var c=int.Parse(Console.ReadLine());
+            //    Console.WriteLine(b[c]);
+            //}
+
+            //catch(Exception e)
+            //    {
+            //    Console.WriteLine("Xeta bas verdi");
+            //}
+
+
 
             #endregion
 
 
-            #region t15
+            #region task10
+            //Istifadəçidən number tipli dəyər alınsın. Daha sonra uzunluğu həmən dəyər olan string array qurulsun və array-in elementlərini daxil etməsi istifadəçidən tələb edilsin. Array-in bütün elementləri daxil edildikdən sonra, array-in elementlərini ekrana yazdırın.
 
-            Random t15 = new Random();
-            int task15 = t15.Next(100);
 
-            if (task15 > 50)
-            {
-                Console.WriteLine(task15);
-            }
-            else
-            {
-                Console.WriteLine("50den kicik eded");
-            }
+            //var a = int.Parse(Console.ReadLine());
+            //int[] b = new int[a];
+
+            //for(int i = 0; i < a; i++)
+            //{
+            //    b[i] = int.Parse(Console.ReadLine());   
+            //}
+
+            //foreach(var item in b) 
+            //    Console.WriteLine(item);
+
 
             #endregion
 
 
-            #region t16
+            #region task11
+            //string[] a = { "1 ", "2 ", "3 ", "4 ", "5 ", "6 ", "7 ", "8 ", "9 ", "10" };
+            //var b = Convert.ToString(a);
+            //Console.WriteLine(b);
+            //foreach(var item in a)
+            //{
+            //    Console.WriteLine(item);
+            //}
 
-            var t16 = int.Parse(Console.ReadLine());
 
-            var tc = t16 % 2 == 0 ? "cut eded" : "tek eded";
+            // bir lineda print etmey olmr 
 
-            Console.WriteLine(tc);
+
+            #endregion
+
+
+            #region task12
+            //var a = int.Parse(Console.ReadLine());
+            //string[] b = new string[a];
+
+            //for(int i = 0; i < a; i++)
+            //{
+            //    b[i] = Console.ReadLine();  
+            //}
+
+            //foreach(var item in b)
+            //{
+            //    Console.WriteLine(item + ",");
+            //}
+
+            // eyni problem
+
+
             #endregion
 
 
 
-            #region t17 
+            #region task13
 
-            var t17 = Console.ReadLine();
-            var t171 = t17.Substring(1);
-            var t172 = t17.Substring(0, 1);
+            //var a = int.Parse(Console.ReadLine());
+            //string[] b = new string[a];
 
-            if (t171.Contains('t') && t172.Contains('t'))
-            {
-                Console.WriteLine("birden cox t var");
-            }
-            else if (t171.Contains('t') || t172.Contains('t'))
-            {
-                Console.WriteLine("bir eded t var");
-            }
-            else
-            {
-                Console.WriteLine("t herfi yoxdur");
-            }
-            #endregion
+            //for (int i = 0; i < a; i++)
+            //{
+            //    b[i] = Console.ReadLine();
+            //}
 
-
-
-            #region t17 st2
-
-            var t170 = Console.ReadLine();
-
-            if (t170.LastIndexOf('t') == t170.IndexOf('t'))
-            {
-                Console.WriteLine("tek t herfi var");
-            }
-            else
-            {
-                Console.WriteLine("Birden cox t var");
-            }
+            //foreach(var item in b)
+            //    Console.WriteLine(item);
 
             #endregion
+
         }
+
     }
 }
