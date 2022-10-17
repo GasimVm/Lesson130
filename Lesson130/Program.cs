@@ -148,7 +148,7 @@ namespace Lesson130
 
             //int a = 15;
             //string b = "84518";
-            //char c = '5';
+            //char c = '5'; 
             //double d = 99;
 
             //Console.WriteLine(a.ToString());
@@ -186,24 +186,32 @@ namespace Lesson130
             //}
             //Console.WriteLine(tersDeyer);
 
+            ////or //ikinci yol
+
+            ////for (int i = deyer.Length - 1; i >= 0; i--)
+            ////{
+            ////    tersDeyer += tersDeyer + deyer[i];
+            ////}
+
             #endregion
             #region Task 13
             //İstifadəçinin daxil etdiyi dəyərin polindrom olub-olmadığını bildirən proqram yazın.
 
-            //Console.WriteLine("Deyer daxil edin : ");
-            //string deyer = Console.ReadLine();
-            //string tersDeyer = "";
+            //Console.WriteLine("Int deyer daxil edin : ");
+            //int deyer = int.Parse(Console.ReadLine());
+            //int rezervDeyer = deyer;
+            //int tersDeyer = 0;
+            //int qaliq;
 
-            //for (int i = deyer.Length - 1; i >= 0; i--)
+            //while (deyer > 0)
             //{
-            //    tersDeyer += deyer.Substring(i, 1);
+            //    qaliq = deyer % 10; // axrinci reqemi goturduk
+            //    deyer = deyer/ 10; // axrincini goturduk deye uje bir mertebe atiriq
+            //    tersDeyer = tersDeyer * 10 + qaliq; // tersDeyer default 0-di , 10-a vurub usdune
+            //                                        // qaliq(axrinci) reqemi geldik. Verdiyimiz
+            //                                        // deyerin axrinci deyeri uje oldu birinci deyerimiz
             //}
-            //if (deyer == tersDeyer)
-            //{
-            //    Console.WriteLine("Bu deyer polindromdur...");
-            //}
-            //else
-            //    Console.WriteLine("Polindrom deyil...");
+            //Console.WriteLine(tersDeyer == rezervDeyer ? "Polindromdur" : "Polindrom deyil");
 
             #endregion
             #region Task 14
@@ -212,6 +220,9 @@ namespace Lesson130
 
             //Console.WriteLine("Reqem daxil edin : ");
             //int reqem = int.Parse(Console.ReadLine());
+            ////reqem = (int)Math.Sqrt(reqem); // Verilen boyuk ededden kok alir,kompu guce salmir
+            //                                 //Bunu yazanda ama 25 kokde 5 chixir,
+            //                                 //murekkebe sade qaytarir(mentiqi error)
             //int qaliq0 = 0;
             //for (int i = 1; i <= reqem; i++)
             //{
@@ -220,14 +231,7 @@ namespace Lesson130
             //        qaliq0++;
             //    }
             //}
-            //if (qaliq0 > 2)
-            //{
-            //    Console.WriteLine("Murekkeb ededdir...");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Sade ededdir...");
-            //}
+            //Console.WriteLine(qaliq0 > 2 ? "Murekkebdir.." : "Sadedir..");
 
             #endregion
             #region Task 15 
@@ -278,13 +282,13 @@ namespace Lesson130
             //int dovrlerinSayi = int.Parse(Console.ReadLine());
 
             //Random rand = new();
-            //int randNum = rand.Next(100);
+            //int randNum = rand.Next(200);
             //int min = randNum;
             //Console.WriteLine("1-ci eded : " + randNum);
 
             //for (int i = 2; i <= dovrlerinSayi; i++)
             //{
-            //    randNum = rand.Next(100);
+            //    randNum = rand.Next(200);
             //    Console.WriteLine($"{i}-ci eded : {randNum}");
             //    if (randNum < min)
             //        min = randNum;
@@ -321,20 +325,20 @@ namespace Lesson130
             //Daha sonra həmən sayda random ədəd generasiya edilsin və
             //ədədlərin 2 mislinin cəmini hesablayın.
 
-            //Console.WriteLine("Dovrlerin sayini daxil edin : ");
-            //int dovrlerinSayi = int.Parse(Console.ReadLine());
+            ////Console.WriteLine("Dovrlerin sayini daxil edin : ");
+            ////int dovrlerinSayi = int.Parse(Console.ReadLine());
 
-            //Random rand = new();
-            //int randNum = rand.Next(100);
-            //Console.WriteLine("1-ci eded : " + randNum + $" 2misli : {randNum * 2} ");
-            //int cemi = randNum * 2;
-            //for (int i = 2; i <= dovrlerinSayi; i++)
-            //{
-            //    randNum = rand.Next(100);
-            //    Console.WriteLine($"{i}-ci eded : {randNum} 2misli : {randNum * 2}");
-            //    cemi += randNum * 2;
-            //}
-            //Console.WriteLine("Ededlerin cemi : " + cemi);
+            ////Random rand = new();
+            ////int randNum = rand.Next(100);
+            ////Console.WriteLine("1-ci eded : " + randNum + $" 2misli : {randNum * 2} ");
+            ////int cemi = randNum * 2;
+            ////for (int i = 2; i <= dovrlerinSayi; i++)
+            ////{
+            ////    randNum = rand.Next(100);
+            ////    Console.WriteLine($"{i}-ci eded : {randNum} 2misli : {randNum * 2}");
+            ////    cemi += randNum * 2;
+            ////}
+            ////Console.WriteLine("Ededlerin cemi : " + cemi);
 
             #endregion
             #region Task 4 
@@ -379,62 +383,79 @@ namespace Lesson130
 
 
             #endregion
-            #region Task 5 yarimciq
+            #region Task 5 
             //İstifadəçidən string dəyər daxil edilməsi tələb edilsin.
             //Bu proses istifadəçi polindrom ədəd daxil edənə kimi davam etsin.
 
-            //string text = "";
-            //string tersText = "";
-
-            //hell1 do while
-
-            //do
+            //bool achar = true;
+            //while (achar)
             //{
+            //    Console.WriteLine("Int deyer daxil edin : ");
+            //    int deyer = int.Parse(Console.ReadLine());
+            //    int rezervDeyer = deyer;
+            //    int tersDeyer = 0;
+            //    int qaliq;
 
-            //    Console.WriteLine("Metn daxil edin : ");
-            //    text = Console.ReadLine();
-
-            //    for (int i = text.Length - 1; i >= 0; i--)
+            //    while (deyer > 0)
             //    {
-            //        tersText += text.Substring(i, 1);
+            //        qaliq = deyer % 10; // axrinci reqemi goturduk
+            //        deyer = deyer / 10; // axrincini goturduk deye uje bir mertebe atiriq
+            //        tersDeyer = tersDeyer * 10 + qaliq; // tersDeyer default 0-di , 10-a vurub usdune
+            //                                            // qaliq(axrinci) reqemi geldik. Verdiyimiz
+            //                                            // deyerin axrinci deyeri uje oldu birinci deyerimiz
             //    }
-
-            //} while (tersText != text);
-
-            //hell2 while
-
-            //while (tersText == text)
-            //{
-
-            //    Console.WriteLine("Metn daxil edin : ");
-            //    text = Console.ReadLine();
-
-            //    for (int i = text.Length - 1; i >= 0; i--)
-            //    {
-            //        tersText += text.Substring(i, 1);
-            //    }
-
+            //    if (tersDeyer == rezervDeyer)
+            //        achar = false;
+            //    Console.WriteLine(tersDeyer == rezervDeyer ? "Polindromdur" : "Polindrom deyil");
             //}
 
             #endregion
-            #region Task 6 bosh
+            #region Task 6
             //0-dan 100-ə kimi ədədlərin ekrana yazdırın.
             //İlk 22-ə bölünən ədədlər ekrana yazdırılmasın. Bunu continue ilə həll edin.
 
+            //for (int i = 0; i <= 100; i++)
+            //{
+            //    if (i % 22 == 0)
+            //    {
+            //        continue;
+            //    }
+            //    Console.WriteLine(i);
+            //}
+
             #endregion
-            #region Task 7 bosh
+            #region Task 7
             //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin.
             //Daha sonra istifadəçidən həmən sayda string daxil etməsi
             //istənilsin və sonda stringlərin uzunluqları cəmini ekrana yazdırın.
 
+            //Console.WriteLine("Dovrlerin sayini daxil edin : ");
+            //int dovrSayi = int.Parse(Console.ReadLine());
+            //int uzunCemi = 0;
+            //for (int i = 0; i < dovrSayi; i++)
+            //{
+            //    Console.WriteLine("String(Metn) deyer daxil edin : ");
+            //    String metn = Console.ReadLine();
+            //    uzunCemi += metn.Length;
+            //}
+            //Console.WriteLine("Stringlerin uzunluqlari cemi {0}",uzunCemi);
 
             #endregion
-            #region Task 8 bosh
+            #region Task 8
             //Istidadəçidən iterasiya(dövr) sayı daxil etməsi istənilsin.
             //Daha sonra istifadəçidən həmən sayda string daxil etməsi
             //istənilsin və sonda stringlərin uzunluqları cəmini ekrana yazdırın.
 
-
+            //Console.WriteLine("Dovrlerin sayini daxil edin : ");
+            //int dovrSayi = int.Parse(Console.ReadLine());
+            //int uzunCemi = 0;
+            //for (int i = 0; i < dovrSayi; i++)
+            //{
+            //    Console.WriteLine("String(Metn) deyer daxil edin : ");
+            //    String metn = Console.ReadLine();
+            //    uzunCemi += metn.Length;
+            //}
+            //Console.WriteLine("Stringlerin uzunluqlari cemi {0}",uzunCemi);
 
             #endregion
             #region Task 9 
@@ -552,10 +573,13 @@ namespace Lesson130
             #region Task 15 Oxu
             //Tiplərin memory sizə və rangelərini oxuyun.
 
+            // Oxudum
+
             #endregion
             #region Task 16 Oxu
             //Garbage collector, value və referens type-lar haqqında oxuyun.
 
+            // Oxudum
             #endregion
             #region Task 17 
             //İstifadəçidən ədəd daxil etməsini tələb edin və daha sonra ədədin
