@@ -1,276 +1,286 @@
-﻿using System;
+﻿//using System;
+//using System.Linq;
 
-namespace taprisig
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+//namespace ht_for_l7
+//{
+//    internal class Program
+//    {
+//        static void Main(string[] args)
+//        {
 
 
 
 
-            #region t1
+//            #region t1
+//            //Istifadəçidən   array   daxil edilməsi tələb edilsin. Daha sonra array  elementlərinə random olaraq yalnız tək ədədlər verilsin. Proqramın sonunda yaranmış  massivin elementlərini   ekrana yazdırın.
 
-            var task1 = Console.ReadLine();
-            Console.WriteLine(task1.TrimStart());
+//            //int[] a = new int[5];
+//            //var c = 0;
 
-            #endregion
+//            //while (c < a.Length)
+//            //{
+//            //    Random r = new Random();
+//            //    int rdn = r.Next(100);
+//            //    if (rdn % 2 == 1)
+//            //    {
+//            //        a[c] = rdn;
+//            //        c++;
+//            //    }
+//            //}
+//            //foreach (int item in a)
+//            //{
+//            //    Console.WriteLine(item);
+//            //}
 
 
-            #region t2
 
-            var task2 = Console.ReadLine().ToLower();
+//            // ancag 1 tek ededi butun elementlere beraber edir
 
-            if (task2.Contains('e') && task2.Contains('q'))
-            {
-                Console.WriteLine("cannot enter e or q symbol");
-            }
+//            #endregion
 
-            else
-            {
-                Console.WriteLine(task2);
-            }
+//            #region  t2
 
-            #endregion
+//            //array təyin edin, elementlərini əlavə edin və minimum elementini ekrana yazdırın.
+//            //int[] a = new int[5] {0, 2,3, 4, 5 };
 
+//            //Console.WriteLine(a.Min());
 
-            #region t3
 
-            var task3 = Console.ReadLine();
-            task3 = task3.Replace(" ", "").ToUpper();
-            Console.WriteLine(task3);
+//            #endregion
 
-            #endregion
+//            #region t3
 
-            #region t4
+//            //Istifadəçidən number dəyər daxil edilməsi istənilsin və elemet sayı daxil edilmiş integer olan array yaradılsın. Daha sonra həmən elementin minimum və maximum elementlərinin hasili ekrana yazdırılsın.
 
-            var task4 = Console.ReadLine();
+//            // var say = int.Parse(Console.ReadLine());
+//            // int[] a = new int[say];
 
-            if (task4.Length >= 7)
-            {
-                Console.WriteLine(task4.Substring(2, 5));
-            }
+//            // for(int i = 0; i < a.Length; i++)
+//            // {
+//            //     a[i] = int.Parse(Console.ReadLine());
+//            // }
 
-            else
-            {
-                Console.WriteLine("can not execute operation");
-            }
+//            //Console.WriteLine("En boyuk eded: " + a.Max());
+//            // Console.WriteLine("En kicik eded: " + a.Min());
+//            #endregion
 
-            #endregion
+//            #region t4
 
+//            //10 elementdən ibarət massiv yaradılsın və elementləri set edilsin. Daha sonra həmən massivi azalan sırada ekrana yazdırın.
 
-            #region t5
+//            //  int[] a = new int[10];
 
-            var task5 = Console.ReadLine();
+//            //  for (int i = 0; i < a.Length; i++)
+//            //  {
+//            //      a[i] = int.Parse(Console.ReadLine());
+//            //  }
+//            //Array.Sort(a);
+//            //  Array.Reverse(a);
+//            //  foreach(int item in a)
+//            //  {
+//            //      Console.WriteLine(item);
+//            //  }
 
-            if (task5 == null || task5 == " ")
-            {
-                Console.WriteLine("value can not be empty or whitespace");
-            }
+//            #endregion
 
+//            #region t5
 
-            #endregion
+//            //  Array təyin edin və elementlərinə dəyər verin.Daha sonra arrayin 1 - ci və sonuncu elementlərinin hasilini ekrana yazdırı
 
+//            //var say = int.Parse(Console.ReadLine());
+//            //int[] a = new int[say];
 
-            #region t6
+//            //for (int i = 0; i < a.Length; i++)
+//            //{
+//            //    a[i] = int.Parse(Console.ReadLine());
+//            //}
+//            //Console.WriteLine(a[0] * a[say-1]);
 
-            const string task6 = "salam";
-            Console.WriteLine(task6);
+//            #endregion
 
-            #endregion
+//            #region t6
 
-            #region t7
+//            // tring dəyər təyin edin. Daha sonra 5 iterasiyalı dövr qurun və hər iterasiyada istifadəçidən dəyər daxil etməsini tələb edin. İstifadəçinin daxil etdiyi hər dəyəri string-ə əlavə edin(arxasında boşluq işarəsi qoymaqla). İstifadəçi 5 dəyərin 5ni də daxil etdikdən sonra string split funksiyasında istifadə edərək əldə edilmiş string dəyərindən string arrayi yaradın ekrana ekrana yazdırın.
+//            //string str = "";
+//            //for(int i = 0; i < 5; i++)
+//            //{
+//            //    var a =Console.ReadLine();  
+//            //    str=str+a+" ";
+//            //}
 
-            Random t7 = new Random();
-            int task7 = t7.Next(100);
+//            //string[] str2 = str.Split(" ");
+//            //foreach(string item in str2)
+//            //{
+//            //    Console.WriteLine(item);    
+//            //}
 
-            Console.WriteLine(task7);
-            #endregion
+//            #endregion
 
+//            #region t7
+//            // array təyin edilsin və elementləri 0-100 arası random ədədlər olsun. Daha sonra arrayın cüt elementlərinin ədədi ortasını tapın.
+//            //int[] a = new int[5];
+//            //var c = 0;
+//            //var s=0;
 
-            #region t8
+//            //for(int i = 0; i < a.Length; i++)
+//            //{
+//            //    Random r = new Random();
+//            //    int rdn=r.Next(100);
+//            //    a[i] = rdn;
+//            //}
 
-            Random t8 = new Random();
-            var task8 = t8.Next(10, 2333);
+//            //for(int i = 0; i < a.Length; i++)
+//            //{
+//            //    if(a[i] % 2 == 0)
+//            //    {
+//            //        c++;
+//            //        s=s+a[i];
+//            //    }
+//            //}
+//            //foreach(int item in a)
+//            //{
+//            //    Console.WriteLine(item);
+//            //}
 
-            Console.WriteLine(task8);
-            #endregion
 
-            #region t9
+//            //Console.WriteLine("ededi orta : " + s/c);
 
-            Guid t9 = Guid.NewGuid();
+//            #endregion
 
-            Console.WriteLine(t9);
-            #endregion
+//            #region t8
+//            //  Math funksiyalarına aid nümunələr yazın. 
 
+//            //var t91 = Convert.ToDouble(Console.ReadLine());
+//            //var t92 = Convert.ToDouble(Console.ReadLine());
 
-            #region t10
+//            //Console.WriteLine("power");
+//            //Console.WriteLine(Math.Pow(t91, t92));
 
-            var t10 = int.Parse(Console.ReadLine());
+//            //Console.WriteLine("Minimum");
+//            //Console.WriteLine(Math.Min(t91, t92));
 
-            if (t10 > 10)
-            {
-                Console.WriteLine("10dan boyuk");
+//            //Console.WriteLine("Maximum");
+//            //Console.WriteLine(Math.Max(t91, t92));
 
-            }
-            else if (t10 < 10)
-            {
-                Console.Write("10dan kicik");
-            }
+//            //Console.WriteLine("modeules");
+//            //Console.WriteLine(Math.Abs(t91));
 
-            else
-            {
-                Console.WriteLine("10a beraber");
-            }
+//            //Console.WriteLine("root");
+//            //Console.WriteLine(Math.Sqrt(t92));
 
-            #endregion
 
 
-            #region t11
 
-            var t11 = Console.ReadLine();
+//            #endregion
 
-            if (t11.Length > 6)
-            {
-                Console.WriteLine("6dan boyuk");
-            }
-            else if (t11.Length < 6)
-            {
-                Console.WriteLine("6dan kicik");
-            }
+//            #region t11
 
-            else
-            {
-                Console.WriteLine("6a beraber");
-            }
+//            //task 10 task3 eynidir
 
-            #endregion
+//            // arrayin  elementlərinin ədədi ortasını tapın.
+//            //var s = 0;
+//            //var say = int.Parse(Console.ReadLine());
+//            //int[] a = new int[say];
 
-            #region t12
+//            //for (int i = 0; i < a.Length; i++)
+//            //{
+//            //    a[i] = int.Parse(Console.ReadLine());
 
-            var t12 = int.Parse(Console.ReadLine());
+//            //    s=s+a[i];
+//            //}
+//            //Console.WriteLine("ededi orta: " + s/say);
 
-            if (t12 == 6 || t12 == 7)
-            {
-                Console.WriteLine("duzgun cavab");
-            }
-            else
-            {
-                Console.WriteLine("yanlis cavab");
-            }
+//            #endregion
 
-            #endregion
+//            #region t12
+//            //var n = int.Parse(Console.ReadLine());
+//            //var s = 0;
+//            //var h = 1;
+//            //while (n > 0)
+//            //{
+//            //    if (n % 10 % 2 == 1)
+//            //    {
+//            //        s = s + n % 10;
+//            //        h = h * (n % 10);
+//            //    }
+//            //    n = n / 10;
+//            //}
+//            //Console.WriteLine($"tek reqemlerin cemi: {s}\n tek ededlerin hasili: {h} ");
 
+//            #endregion
 
-            #region t13
+//            #region t13
+//            //int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } max min elementlerin cemini tapin.
 
-            var t13 = int.Parse(Console.ReadLine());
+//            //int[] arr = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
+//            //Console.WriteLine(arr.Max()+arr.Min());
 
-            if (t13 > 20)
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
 
-            else if (t13 >= 10)
-            {
-                Console.WriteLine("10-20 araligi");
-            }
+//            #endregion
 
-            else if (t13 >= 1)
-            {
-                Console.WriteLine("1-10araligi");
-            }
-            else
-            {
-                Console.WriteLine("netice tapilmadi");
-            }
+//            #region t14
+//            // int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } artan sira ile siralayin.
 
-            #endregion
 
+//            //int[] arr = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
+//            //Array.Sort(arr);
 
+//            //foreach(int item in arr)
+//            //{
+//            //    Console.WriteLine(item);    
+//            //}
 
-            #region t14
 
-            var t14 = int.Parse(Console.ReadLine());
 
-            if (t14 % 2 == 0)
-            {
-                Console.WriteLine("cut eded");
-            }
+//            #endregion
 
-            else
-            {
-                Console.WriteLine("tek eded");
-            }
+//            #region t15
 
-            #endregion
+//            // Dördrəqəmli tam ədəd verilmişdir. Ədədin bütün rəqəmlərinin fərqli olub olmadığını müəyyənləşdirin.
 
+//            //var n = int.Parse(Console.ReadLine());
+//            //var a = n / 1000;
+//            //var b = n / 100 % 10;
+//            //var c = n % 100 / 10;
+//            //var d = n % 10;
 
-            #region t15
+//            //if(a == b || a==c || a==d || b==c || b==d || c == d)
+//            //{
+//            //    Console.WriteLine("eyni eded var");
+//            //}
+//            //else
+//            //{
+//            //    Console.WriteLine("butun ededler ferglidir");
+//            //}
 
-            Random t15 = new Random();
-            int task15 = t15.Next(100);
 
-            if (task15 > 50)
-            {
-                Console.WriteLine(task15);
-            }
-            else
-            {
-                Console.WriteLine("50den kicik eded");
-            }
 
-            #endregion
 
+//            #endregion
 
-            #region t16
+//            #region
+//            // Dördrəqəmli tam ədəd verilmişdir. Rəqəmdə 3 rəqəminin olub olmadığını müəyyənləşdirin.
 
-            var t16 = int.Parse(Console.ReadLine());
 
-            var tc = t16 % 2 == 0 ? "cut eded" : "tek eded";
+//            //var n= int.Parse(Console.ReadLine());
+//            //var h = 0;
+//            //while (n > 0)
+//            //{
+//            //    if (n % 10 == 3)
+//            //    {
+//            //        Console.Write("3 regemi ededin icinde var");
+//            //        h = 1;
+//            //        break;
+//            //    }
+//            //    n=n/ 10;
+//            //}
 
-            Console.WriteLine(tc);
-            #endregion
+//            //if (h ==0)
+//            //{
+//            //    Console.Write("bu ededin icinde 3 regemi yoxdur");
+//            //}
 
-
-
-            #region t17 
-
-            var t17 = Console.ReadLine();
-            var t171 = t17.Substring(1);
-            var t172 = t17.Substring(0, 1);
-
-            if (t171.Contains('t') && t172.Contains('t'))
-            {
-                Console.WriteLine("birden cox t var");
-            }
-            else if (t171.Contains('t') || t172.Contains('t'))
-            {
-                Console.WriteLine("bir eded t var");
-            }
-            else
-            {
-                Console.WriteLine("t herfi yoxdur");
-            }
-            #endregion
-
-
-
-            #region t17 st2
-
-            var t170 = Console.ReadLine();
-
-            if (t170.LastIndexOf('t') == t170.IndexOf('t'))
-            {
-                Console.WriteLine("tek t herfi var");
-            }
-            else
-            {
-                Console.WriteLine("Birden cox t var");
-            }
-
-            #endregion
-        }
-    }
-}
+//            #endregion
+//        }
+//    }
+//}
