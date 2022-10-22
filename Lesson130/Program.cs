@@ -9,151 +9,263 @@ namespace Lesson130
         static void Main(string[] args)
         {
             #region
-            //1.İstifadəçidən number formatlı dəyər daxil edilməsi istənilsin.
-            //Daxil edilmiş dəyər qədər 0 - la 200 arasında ədəd generasiya olunsun və bu ədədlərin cəmi ekrana yazdırılsın.
-            /*  Console.WriteLine("loop daxil edin");
-              int loop = Convert.ToInt32(Console.ReadLine());
-              int result=0;
-              for (int i = 1; i <= loop; i++)
-              {
-                  Random rdm = new Random();
-                  int number = rdm.Next(0,200);
-                  Console.WriteLine(number);
-                  result += number;
-              }
-              Console.WriteLine($"ededler cemi - {result}"); */
-            #endregion
-
-            #region
-            //2.1-dən 20-ə kimi  ədədlərin kvadları cəmi ekrana yazdırılsın.
-            /*  int result = 0;
-              for (int i = 1; i <=20; i++)
-              {
-                  result = result + (i*i);
-              }
-              Console.WriteLine(result); */
-            #endregion
-
-            #region
-            //3.Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra arrayin max elementi ekrana yazdırılsın.
+            //1.Istifadəçidən   array   daxil edilməsi tələb edilsin. Daha sonra array  elementlərinə random olaraq yalnız tək ədədlər verilsin. Proqramın sonunda yaranmış  massivin elementlərini   ekrana yazdırın.
             /*
             int range = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[range];
-            for (int i = 0; i < range; i++)
+            int[] array =new int[range];
+            int index = 0;
+            while (index < range)
             {
-                Console.WriteLine("elementleri daxil edin :");
-                int arrElement= Convert.ToInt32(Console.ReadLine());
-                array[i] = arrElement;
-            }
-            //Console.WriteLine(array.Max()); ve ya 
-            int j = 0;
-            for (int i = 0; i <array.Length ; i++)
-            {
-                if (array[j]>= array[i])
+                Random rand = new Random();
+                int element = rand.Next(1,100);
+                if (!(element%2==0))
                 {
-                    continue;
-                }
-                else
-                {
-                    j= i;
+                    array[index] = element;
+                    index++;
                 }
             }
-            Console.WriteLine(array[j]); */
+            foreach (int element in array)
+            {
+                Console.WriteLine(element);
+            }
+            */
             #endregion
 
             #region
-            //4.10 elementli array yaradılsın və element dəyərləri arrayi yaradarkən verilsin. Daha sonra arrayin minimum elementi ekrana yazdırılsın.
+            //2. array təyin edin, elementlərini əlavə edin və minimum elementini ekrana yazdırın.
             /*
-            int[] array = {1,2,3,4,5,6,7,8,9,10};
-            Console.WriteLine(array.Min()); */
+            int[] array = new int[5] { 92, 73, 98, 221, 111 };
+            int min= 0;
+            for(int i = 1; i < array.Length; i++)
+            {
+                if (array[i] <= array[min])
+                {
+                    min = i;
+                }
+            } 
+            Console.WriteLine(array[min]);  */
             #endregion
 
             #region
-            //5.Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra arrayin tək elementləri ekrana yazdırılsın.
+            //3.Istifadəçidən number dəyər daxil edilməsi istənilsin və elemet sayı daxil edilmiş integer olan array yaradılsın. Daha sonra həmən elementin minimum və maximum elementlərinin hasili ekrana yazdırılsın.
             /*
             int range = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[range];
+            int[] array= new int[range];
+            Random rdm = new Random();
             for (int i = 0; i < range; i++)
             {
-                int element= Convert.ToInt32(Console.ReadLine());
+                int element = rdm.Next(1,100);
+                Console.WriteLine(element);
                 array[i] = element;
             }
-            /* foreach (int single in array)
-             {
-                 if(single%2==0)
-                     continue;
-                 else 
-                     Console.WriteLine(single+"\n");
-             } */
-            //veya
+            int max = 0;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] >= array[max])
+                {
+                    max = i;
+                }
+            } 
+            int min=0;
+            for (int i = 1; i < array.Length; i++) 
+            {
+                if (array[i] <= array[min])
+                {
+                    min=i;
+                }
+            }
+            Console.WriteLine($"bize lazim olan cavab:min={array[min]},max={array[max]},hasil={array[min] * array[max]}");
+            */
+            #endregion
+
+            #region
+            //4.10 elementdən ibarət massiv yaradılsın və elementləri set edilsin. Daha sonra həmən massivi azalan sırada ekrana yazdırın.
+            
+            int[] array = new int[10] { 12, 23, 45, 89, 90, 123, 67, 78, 234, 567 };
+
+            #endregion
+
+            #region
+            //5.Array təyin edin və elementlərinə dəyər verin. Daha sonra arrayin 1-ci və sonuncu elementlərinin hasilini ekrana yazdırın.
             /*
+            int[] array= new int[5] {122,34,25,56,234};
+            int a= array[0];
+            int b = array[array.Length-1];
+            Console.WriteLine($"birinci element={a},sonuncu={b},hasil={a*b}"); */
+            #endregion
+
+            #region
+            //6.String dəyər təyin edin. Daha sonra 5 iterasiyalı dövr qurun və hər iterasiyada istifadəçidən dəyər daxil etməsini tələb edin. İstifadəçinin daxil etdiyi hər dəyəri string-ə əlavə edin(arxasında boşluq işarəsi qoymaqla). İstifadəçi 5 dəyərin 5ni də daxil etdikdən sonra string split funksiyasında istifadə edərək əldə edilmiş string dəyərindən string arrayi yaradın ekrana ekrana yazdırın.
+            /*
+            string text = null;
+            for (int i = 0; i < 5; i++)
+            {
+                string element=Console.ReadLine();
+                text= text + element + " ";
+            }
+            //splitin nece islediyini basa dusmedim */
+            #endregion
+
+            #region
+            //7.array təyin edilsin və elementləri 0-100 arası random ədədlər olsun. Daha sonra arrayın cüt elementlərinin ədədi ortasını tapın.
+            /*
+            int[] array = new int[10];
+            Random rand = new Random();
             for (int i = 0; i < array.Length; i++)
             {
-                if (array[i] % 2 == 0)
-                    continue;
-                else
-                    Console.WriteLine(array[i] + "\n");
-            } */
-            #endregion
-
-            #region
-            //6.Istifadəçidən number dəyər daxil edilməsi istənilsin. Daha sonra element sayı daxil edilmiş number olan int tipli array yaradılsın və istifadəçidən arrayin elementlərini daxil etməsi tələb olunsun. İstifadəçi arrayin bütün elementlərini daxil etdikdən sonra hər bir elementin dəyəri 2misli ilə əvəz edilərək ekrana yazdırılsın.
-            /*
-            int range = Convert.ToInt32(Console.ReadLine());
-            int[] array = new int[range];
-            for (int i = 0; i < range; i++)
-            {
-                int element = Convert.ToInt32(Console.ReadLine());
+                int element = rand.Next(0,100);
+                Console.WriteLine(element);
                 array[i] = element;
             }
-            for (int i = 0; i < range; i++)
+            int plural = 0;
+            int mid = 0;
+            foreach (int element in array)
             {
-                array[i] *=2;
+                if (element%2==0)
+                {
+                    plural=plural + element;
+                    mid++;
+                }
             }
-            foreach (int dbl in array)
-            {
-                Console.WriteLine(dbl);
-            } */
-            #endregion
-
-            #region 
-            //8.6 elementli integer arrayi yaradılsın və istifadəçidən onun dəyərlərinin daxil edilməsi tələb edilsin. Daha sonra yaranmış arrayi artan sıra ilə düzüb ekrana yazın. (Array.Sort ilə yox, alqoritmi yazın).
-            //????????????????????????????????????????/
-            #endregion
-
-            #region 
-            //10.Istifadəçidən number tipli dəyər alınsın. Daha sonra uzunluğu həmən dəyər olan string array qurulsun və array-in elementlərini daxil etməsi istifadəçidən tələb edilsin. Array-in bütün elementləri daxil edildikdən sonra, array-in elementlərini ekrana yazdırın.
-            /*
-            int range = Convert.ToInt32(Console.ReadLine());
-            string[] array = new string[range];
-            for (int i = 0; i < range; i++)
-            {
-                string element = Console.ReadLine();
-                array[i] = element;
-            }
-            foreach (string el in array)
-            {
-                Console.WriteLine(el + ",");
-            } */
+            Console.WriteLine($"bize lazim olan={plural/mid}"); */
             #endregion
 
             #region
-            //11.string dəyər təyin edin və daxilində 1-dən 10-a kimi ədədlər aralarında boşluq işarəsi olmaqla yazılsın. (“1 2 3 …”) Daha sonra hər bir ədədi ekrana yazdırın. (yeni sətirdən, yəni Сonsole.WriteLine ilə)
-            //serti basa dusmedim
+            //8.Math funksiyalarına aid nümunələr yazın.
+            /*
+            double d = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(Math.Sqrt(d)); */
             #endregion
 
             #region
-            //12.string dəyər təyin edin və dövr operatoru istifadə edərək hər bir elementini ekrana yazdırın. Elementlər arasında vergül işarəsi istifadə edilsin.
+            //10.Arrayin max və min elementlərinin hasilini tapın.
             /*
-            string txt = Console.ReadLine();
-            for (int i = 0; i < txt.Length; i++)
+            int[] array = new int[10] {1296,34,295,67,9000,89,234,124,678,2345};
+            int max = 0;
+            for (int i = 1; i < array.Length; i++)
             {
-                char element;
-                element = txt[i];
-                Console.WriteLine(element + ",");
+                if (array[i] >= array[max])
+                {
+                    max = i;
+                }
+            }
+            int min = 0;
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] <= array[min])
+                {
+                    min = i;
+                }
+            }
+            Console.WriteLine($"max element={array[max]},min element={array[min]},hasil={array[max] * array[min]}");
+            */
+            #endregion
+
+            #region
+            //11.arrayin  elementlərinin ədədi ortasını tapın.
+            /*
+            int[] array = new int[10] {123,456,34,89,9087,2345,78,12,1267,2345};
+            int sum = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                sum = sum + array[i];
+            }
+            int result = sum / array.Length;
+            Console.WriteLine(result); */
+            #endregion
+
+            #region
+            //12.5(45623) reqemli eded verilib,ededin tek reqemlerin cemini ve hasilini tap	out.
+            /*
+            int number = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[number.ToString().Length];
+            int rezerv = number;
+            int changenumber = 0;
+            for (int i = 0; i < array.Length; i++)
+            {
+                changenumber = number % 10;
+                number = number / 10;
+                array[array.Length-1-i] = changenumber;
+            }
+            int resultsum = 0;
+            int result2 = 1;
+            foreach (int element in array)
+            {
+                if (!(element%2==0))
+                {
+                    resultsum += element;
+                    result2 *= element;
+                }
+            }
+            Console.WriteLine($"cem={resultsum},hasil={result2}");
+            */
+            #endregion
+
+            #region
+            //13.int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } max min elementlerin cemini tapin.
+            /*
+            int[] arr = new int[7] { 5, 9, 2000, 45, 6, 78, 7 };
+            Console.WriteLine(arr.Max() + arr.Min()); */
+            #endregion
+
+            #region
+            //14.int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } artan sira ile siralayin.
+
+            #endregion
+
+            #region
+            //15.Dördrəqəmli tam ədəd verilmişdir. Ədədin bütün rəqəmlərinin fərqli olub olmadığını müəyyənləşdirin.
+            /*
+            int number = Convert.ToInt32(Console.ReadLine());
+            int[] array = new int[number.ToString().Length];
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[array.Length - 1 - i] = number % 10;
+                number /= 10;
+            }
+            bool check = true;
+            bool tap = false;
+            int favoriteIndex = 0;
+            while (check)
+            {
+                for (int i = favoriteIndex+1; i < array.Length; i++)
+                {
+                    if(array[favoriteIndex] != array[i] && i==array.Length-1)
+                    {
+                        favoriteIndex++;
+                    }
+                    else if (array[favoriteIndex] == array[i])
+                    {
+                        check = false;
+                        tap = true;
+                        break;
+                    }
+                }
+                if (favoriteIndex==array.Length-1)
+                {
+                    check = false;
+                    break;
+                }
+            }
+            if (tap)
+            {
+                Console.WriteLine("tapildi");
+            }
+            else
+            {
+                Console.WriteLine("tapmadim");
             } */
             #endregion
+
+         
+
+
+
+
+
+
         }
+
 
     }
 }
