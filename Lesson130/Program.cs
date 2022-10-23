@@ -16,11 +16,10 @@ namespace Lesson130
             //Console.WriteLine("Reqem formatli deyer daxil edin : ");
             //int dovrlerinSayi = int.Parse(Console.ReadLine());
 
-            //Random rand = new();
-            //int randNum = rand.Next(200);
-            //Console.WriteLine("1-ci eded : " + randNum);
-            //int cemi = randNum;
-            //for (int i = 2; i <= dovrlerinSayi; i++)
+            //Random rand = new Random();
+            //int randNum = 0;
+            //int cemi = 0;
+            //for (int i = 1; i <= dovrlerinSayi; i++)
             //{
             //    randNum = rand.Next(200);
             //    Console.WriteLine($"{i}-ci eded : {randNum}");
@@ -55,18 +54,36 @@ namespace Lesson130
             //int[] array = new int[deyer];
             //for (int i = 0; i < deyer; i++)
             //{
-            //    Console.WriteLine($"Arrayin {i}-ci elementini daxil edin");
+            //    Console.WriteLine($"Arrayin {i}-ci indexdeki elementini daxil edin");
             //    array[i] = int.Parse(Console.ReadLine());
             //}
-            //Console.WriteLine("Maksimum element {0}",array.Max());
+
+            //int max = array[0];
+
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //    if (array[i] > max)
+            //    {
+            //        max = array[i];
+            //    }
+            //}
+            //Console.WriteLine("Maksimum element : {0}", max); //Hazir metod : array.Max
 
             #endregion
             #region Task 4
             //10 elementli array yaradılsın və element dəyərləri arrayi
             //yaradarkən verilsin. Daha sonra arrayin minimum elementi ekrana yazdırılsın.
 
-            //int[] array = new int[10] {10,9,8,7,6,5,4,3,2,1};
-            //Console.WriteLine(array.Min());
+            //int[] array = new int[10] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+            //int min = array[0];
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //    if (array[i] < min)
+            //    {
+            //        min = array[i];
+            //    }
+            //}
+            //Console.WriteLine("Minimum element : {0}", min);
 
             #endregion
             #region Task 5
@@ -129,30 +146,34 @@ namespace Lesson130
             //}
 
             #endregion
-            #region Task 8 yarimciq
+            #region Task 8
             //6 elementli integer arrayi yaradılsın və istifadəçidən
             //onun dəyərlərinin daxil edilməsi tələb edilsin. Daha sonra
             //yaranmış arrayi artan sıra ilə düzüb ekrana yazın. (Array.Sort ilə yox, alqoritmi yazın).
 
             //int[] array = new int[6];
-            //int[] arraySorted = new int[6];
-            //for (int i = 0; i < 6; i++)
+            //for (int i = 0; i < array.Length; i++)
             //{
-            //    Console.WriteLine("Arrayin elementini daxil edin : ");
+            //    Console.WriteLine($"Arrayin {i}-ci indexindeki elementini daxil edin : ");
             //    array[i] = int.Parse(Console.ReadLine());
             //}
-            //for (int i = 0; i < 5; i++)
+            //int temp = 0;
+            //for (int i = 0; i < array.Length - 1; i++)
             //{
-            //    if (array[i] < array[i + 1])
+            //    for (int j = i + 1; j < array.Length; j++)
             //    {
-            //        arraySorted[i] = array[i];
+            //        if (array[i] > array[j])
+            //        {
+            //            temp = array[i];
+            //            array[i] = array[j];
+            //            array[j] = temp;
+            //        }
             //    }
-            //    else
-            //        arraySorted[i] = array[i + 1];
             //}
-            //foreach (var item in arraySorted)
+            //Console.WriteLine("Artan sira ...");
+            //foreach (var item in array)
             //{
-            //    Console.Write(item);
+            //    Console.WriteLine(item);
             //}
 
             #endregion
@@ -232,7 +253,5 @@ namespace Lesson130
             #endregion
 
         }
-
-
     }
 }
