@@ -91,7 +91,7 @@ namespace Lesson130
             //{
             //    array[i] = random.Next(200);
             //}
-            //for (int i = 0; i < array.Length; i++)
+            //for (int i = 0; i < array.Length - 1; i++)
             //{
             //    for (int j = i + 1; j < array.Length; j++)
             //    {
@@ -212,57 +212,46 @@ namespace Lesson130
             //Console.WriteLine(a);
 
             #endregion
-            #region task 10 qalmisam
+            #region task 10
             // arrayin max və min elementlərinin hasilini tapın.
 
             //int[] array = { 4, 8, 95, 5, 9, 65, 94, 4, 5 };
-            //int temp = 0;
+            //int min = array[0], max = array[0];
             //for (int i = 0; i < array.Length; i++)
             //{
-            //    for (int j = i + 1; j < array.Length; j++)
-            //    {
-
-            //    }
+            //    if (array[i] > max)
+            //        max = array[i];
+            //    else if (array[i] < min)
+            //        min = array[i];
             //}
-            //foreach (var item in array)
-            //{
-            //    Console.WriteLine(item);
-            //}
-            //Console.WriteLine($"{array.Max()} * {array.Min()} = {array.Max() * array.Min()}");
+            //Console.WriteLine($"Maksimum element : {max}, Minimum element : {min}" + "\n" +
+            //    $"{max} * {min} = {max * min}");
 
             #endregion
             #region Task 11
             //  arrayin  elementlərinin ədədi ortasını tapın.
 
             //int[] array = { 40, 10, 29, 21 };
-            //int b = (int)array.Average();
-            //Console.WriteLine(b);
+            //int cem = 0;
+            //Console.WriteLine("Arrayin elementleri :");
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    cem += array[i];
+            //}
+            //Console.WriteLine($"Ededi orta : {cem} / {array.Length} = {cem/array.Length}");
+
+            //////int b = (int)array.Average(); // hazir metod
 
             #endregion
             #region Task 12
             //5(45623) reqemli eded verilib,ededin tek reqemlerin cemini ve hasilini tapin
 
-
-            ////// Hell yolu 1 //////
-
-            //int cem = 0;
-            //int hasil = 1;
-            //int[] array = new int[5] {4, 5, 6, 2, 3 };
-            //for (int i = 0; i < array.Length; i++)
-            //{
-            //    if (array[i] % 2 == 1)
-            //    {
-            //        cem += array[i];
-            //        hasil *= array[i];
-            //    }
-            //}
-            //Console.WriteLine($"Cemi : {cem} , Hasili : {hasil}");
-
-
-            ////// Hell yolu 2 //////
-
             //int eded = 45623, qaliq = 0, cem = 0, hasil = 1;
-            //while (eded>0)
+            //while (eded > 0)
             //{
             //    qaliq = eded % 10;
             //    if (qaliq % 2 == 1)
@@ -276,20 +265,43 @@ namespace Lesson130
 
             #endregion
             #region Task 13
-            //int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } max min elementlerin cemini tapin.
+            //int[] array = new int[7] { 5, 9, 0, 45,6,78,7 } max min elementlerin cemini tapin.
 
-            //int[] arr = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
-            //Console.WriteLine(arr.Max() + arr.Min());
+            //int[] array = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
+            //int min = array[0], max = array[0];
+            //for (int i = 1; i < array.Length; i++)
+            //{
+            //    if (array[i] > max)
+            //    {
+            //        max = array[i];
+            //    }
+            //    else if (min > array[i])
+            //        min = array[i];
+            //}
+            //Console.WriteLine($"Maksimum : {max}, Minimum : {min}" + "\n"
+            //    + $"Cemi : {max + min}");
 
             #endregion
             #region Task 14
-            //int[] arr = new int[7] { 5, 9, 0, 45,6,78,7 } artan sira ile siralayin.
+            //int[] array = new int[7] { 5, 9, 0, 45,6,78,7 } artan sira ile siralayin.
 
-            //int[] arr = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
-            //Array.Sort(arr);
-            //foreach (var item in arr)
+            //int[] array = new int[7] { 5, 9, 0, 45, 6, 78, 7 };
+            //int temp = 0;
+            //for (int i = 0; i < array.Length - 1; i++)
             //{
-            //    Console.Write(item + " ");
+            //    for (int j = i + 1; j < array.Length; j++)
+            //    {
+            //        if (array[i] > array[j])
+            //        {
+            //            temp = array[i];
+            //            array[i] = array[j];
+            //            array[j] = temp;
+            //        }
+            //    }
+            //}
+            //foreach (var item in array)
+            //{
+            //    Console.WriteLine(item);
             //}
 
             #endregion
@@ -300,9 +312,7 @@ namespace Lesson130
             //int eded = int.Parse(Console.ReadLine());
             //int qaliq = 0;
             //int[] array = new int[4];
-
             //int test = 0;
-
             //qaliq = eded % 10;
             //array[0] = qaliq;
             //eded = eded / 10;
@@ -316,6 +326,13 @@ namespace Lesson130
             //    }
             //    eded = eded / 10;
             //}
+            //if (array[0] == array[1] && array[1] != array[2] && array[2] == array[3])
+            //{
+            //    Console.WriteLine("1ci ile 2ci , 3cu ile 4cu reqem eynidi");
+            //}
+            //else if (array[0] != array[1] && array[1] == array[2] && array[2] != array[3])
+            //    Console.WriteLine("1ci ile 4cu , 2ci ile 3cu reqem eynidi");
+            //else
             //Console.WriteLine(test == 0 ? "Butun reqemler ferqlidi" : test + 1 == 4 ? "Butun reqemleri eynidi" :
             //    $"Eyni reqemlerin sayi :{test + 1}");
 
@@ -332,7 +349,8 @@ namespace Lesson130
             //    if (qaliq == 3)
             //    {
             //        three += qaliq;
-            //        reqem = (int)Math.CopySign(reqem,-1); // dovru dayandirmaq uchun
+            //        break;
+            //        ////reqem = (int)Math.CopySign(reqem, -1); // dovru dayandirmaq uchun
             //    }
             //    reqem /= 10;
             //}
