@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Lesson130
 {
@@ -8,10 +9,10 @@ namespace Lesson130
         {
 
             #region Task 1
-            // Istifadəçidən   array   daxil edilməsi tələb edilsin.
-            // Daha sonra array  elementlərinə random olaraq yalnız
+            // Istifadəçidən array daxil edilməsi tələb edilsin.
+            // Daha sonra array elementlərinə random olaraq yalnız
             // tək ədədlər verilsin. Proqramın sonunda yaranmış
-            // massivin elementlərini   ekrana yazdırın.
+            // massivin elementlərini  ekrana yazdırın.
 
             //Console.WriteLine("Arrayin uzunlugunu daxil edin : ");
             //int[] array = new int[int.Parse(Console.ReadLine())];
@@ -35,9 +36,8 @@ namespace Lesson130
             #region Task 2
             // Array təyin edin, elementlərini əlavə edin və minimum elementini ekrana yazdırın.
 
-            //int[] array = new int[5] {78,105,56,23,45};
-            ////Console.WriteLine(array.Min());  //hazir metod
-            ////int min = 0;
+            //int[] array = new int[5] { 78, 105, 56, 23, 45 };
+            //////Console.WriteLine(array.Min());  //hazir metod
             //int min = array[0];
             //for (int i = 1; i < array.Length; i++)
             //{
@@ -49,15 +49,35 @@ namespace Lesson130
             //Console.WriteLine($"En kicik eded : {min}");
 
             #endregion
-            #region Task 3 ???
+            #region Task 3
             // Istifadəçidən number dəyər daxil edilməsi istənilsin və
             // element sayı daxil edilmiş integer olan array yaradılsın.
             // Daha sonra həmən elementin minimum və maximum
             // elementlərinin hasili ekrana yazdırılsın.
 
-            //Console.WriteLine("Number deyer daxil edin : ");
+            //Console.WriteLine("Arrayin uzunlugunu daxil edin : ");
             //int[] array = new int[int.Parse(Console.ReadLine())];
-            //Console.WriteLine(array.Max()*array.Min());
+
+            //Random random = new Random();
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    array[i] = random.Next(100);
+            //    Console.WriteLine($"{i}ci eded : {array[i]}");
+            //}
+            //int min = array[0];
+            //int max = array[0];
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    if (array[i] > max)
+            //    {
+            //        max = array[i];
+            //    }
+            //    else if(min > array[i])
+            //        min = array[i];
+            //}
+            //Console.WriteLine($"Minimum ve maksimumun hasili : {min * max}");
+
+            //////Console.WriteLine(array.Max() * array.Min()); //// Hazir metod
 
             #endregion
             #region Task 4
@@ -65,22 +85,33 @@ namespace Lesson130
             //Daha sonra həmən massivi azalan sırada ekrana yazdırın.
 
             //int[] array = new int[10];
-            //array[0] = 18;
-            //array[1] = 7;
-            //array[2] = 35;
-            //array[3] = 14;
-            //array[4] = 25;
-            //array[5] = 62;
-            //array[6] = 27;
-            //array[7] = 87;
-            //array[8] = 59;
-            //array[9] = 11;
-            //Array.Sort(array);
-            //Array.Reverse(array);
+            //Random random = new Random();
+            //int temp = 0;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    array[i] = random.Next(200);
+            //}
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    for (int j = i + 1; j < array.Length; j++)
+            //    {
+            //        if (array[i] < array[j])
+            //        {
+            //            temp = array[i];
+            //            array[i] = array[j];
+            //            array[j] = temp;
+            //        }
+            //    }
+            //}
             //foreach (var item in array)
             //{
             //    Console.WriteLine(item);
             //}
+
+            //// hazir metod ////
+            //////Array.Sort(array);
+            //////Array.Reverse(array);
+
 
             #endregion
             #region Task 5
@@ -88,7 +119,7 @@ namespace Lesson130
             // Daha sonra arrayin 1-ci və sonuncu elementlərinin hasilini ekrana yazdırın.
 
             //int[] array = { 1, 2, 3, 4, 5, 6 };
-            //Console.WriteLine(array[1] * array[array.Length - 1]);
+            //Console.WriteLine(array[0] * array[array.Length - 1]);
 
             #endregion
             #region Task 6
@@ -116,53 +147,62 @@ namespace Lesson130
             //array təyin edilsin və elementləri 0-100 arası random ədədlər olsun.
             //Daha sonra arrayın cüt elementlərinin ədədi ortasını tapın.
 
-            //Random random = new Random();
-            //int cutElementCem = 0;
-            //int cutElementSay = 0;
-            //int[] array= new int[5];
-            //array[0] = random.Next(100);
-            //array[1] = random.Next(100);
-            //array[2] = random.Next(100);
-            //array[3] = random.Next(100);
-            //array[4] = random.Next(100);
-
-            //for (int i = 0; i < array.Length; i++)
-            //{
-            //    if (array[i] % 2 == 0)
-            //    {
-            //        cutElementCem += array[i];
-            //        cutElementSay++;
-            //    }
-            //}
             //try
             //{
-            //    Console.WriteLine(cutElementCem / cutElementSay);
+            //    Random random = new Random();
+            //    int cutElementCem = 0;
+            //    int cutElementSay = 0;
+            //    int[] array = new int[6];
+            //    for (int i = 0; i < array.Length; i++)
+            //    {
+            //        array[i] = random.Next(100);
+            //        Console.WriteLine($"Arrayin {i}-ci elementi : " + array[i]);
+            //    }
+            //    Console.WriteLine("Cüt elementler :");
+            //    for (int i = 0; i < array.Length; i++)
+            //    {
+            //        if (array[i] % 2 == 0)
+            //        {
+            //            cutElementCem += array[i];
+            //            cutElementSay++;
+            //            Console.WriteLine(array[i]);
+            //        }
+            //    }
+            //    Console.WriteLine("Ededi orta : " + cutElementCem / cutElementSay);
             //}
             //catch (DivideByZeroException ex)
             //{
             //    Console.WriteLine("Random generatoru butun reqemleri tek verdi.. Yeniden cehd edin.");
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
             //}
 
             #endregion
             #region Task 8
             //Math funksiyalarına aid nümunələr yazın.
 
-            //Console.WriteLine(Math.Truncate(6.95));
-            //Console.WriteLine(Math.Clamp(1, 5, 15));
-            //Console.WriteLine(Math.Abs(-6));
-            //Console.WriteLine(Math.BitDecrement(55));
-            //Console.WriteLine(Math.Cbrt(27));
-            //Console.WriteLine(Math.CopySign(4.5, -5));
-            //Console.WriteLine(Math.Pow(2, 5));
-            //Console.WriteLine(Math.Round(5.5));
+            //Console.WriteLine(Math.Truncate(6.95)); // kesr hisseni atib verir
+            //Console.WriteLine(Math.Clamp(10, 5, 15)); // birinci verilen eded araliqdadisa
+            // ededi yox eger deyilse,
+            // serhedlerden hansina yaxindisa onu verir.
+            //Console.WriteLine(Math.Abs(-6)); // modul
+            //Console.WriteLine(Math.BitDecrement(55)); // axirin .999999999999 edir
+            //Console.WriteLine(Math.Cbrt(27)); // 3cu dereceden kok alir
+            //Console.WriteLine(Math.CopySign(4.5, -5)); // ikincinin isharesin birinciye verir
+            //Console.WriteLine(Math.Pow(2, 5)); // 2 ustu 5
+            //Console.WriteLine(Math.Round(5.5)); // yuvarlaqlasdirma riyazdaki kimi
 
             #endregion
             #region task 9
             //String metodlarına aid nümunələr yazın.
 
-            //string a = " Nurlan";
+            //string a = " nurlan ";
+            //Console.WriteLine(a.Length);
             //a = a.Replace('n', 'a').ToUpper();
-            //Console.WriteLine(a.Min());
+            //Console.WriteLine(a);
+            //Console.WriteLine(a.Max());
             //a = a.Substring(1, 3);
             //Console.WriteLine(a);
             //a.ToCharArray();
@@ -172,10 +212,18 @@ namespace Lesson130
             //Console.WriteLine(a);
 
             #endregion
-            #region task 10
+            #region task 10 qalmisam
             // arrayin max və min elementlərinin hasilini tapın.
 
             //int[] array = { 4, 8, 95, 5, 9, 65, 94, 4, 5 };
+            //int temp = 0;
+            //for (int i = 0; i < array.Length; i++)
+            //{
+            //    for (int j = i + 1; j < array.Length; j++)
+            //    {
+
+            //    }
+            //}
             //foreach (var item in array)
             //{
             //    Console.WriteLine(item);
