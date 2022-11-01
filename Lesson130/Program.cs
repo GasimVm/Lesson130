@@ -19,13 +19,15 @@ namespace Lesson130
             //Random random = new Random();
             //for (int i = 0; i < array.Length; i++)
             //{
-            //    int a = random.Next(200);
-            //    if (a % 2 == 1)
+            //    while (true)
             //    {
+            //      int a = random.Next(200);
+            //      if (a % 2 == 1)
+            //      {
             //        array[i] = a;
+            //            break;
+            //      }
             //    }
-            //    else
-            //        array[i] = a + 1;
             //}
             //foreach (var item in array)
             //{
@@ -229,7 +231,7 @@ namespace Lesson130
 
             #endregion
             #region Task 11
-            //  arrayin  elementlərinin ədədi ortasını tapın.
+            // arrayin elementlərinin ədədi ortasını tapın.
 
             //int[] array = { 40, 10, 29, 21 };
             //int cem = 0;
@@ -308,6 +310,33 @@ namespace Lesson130
             #region Task 15
             //Dördrəqəmli tam ədəd verilmişdir. Ədədin bütün rəqəmlərinin fərqli olub olmadığını müəyyənləşdirin.
 
+            ////// Esas hell yolu ////
+            
+            //Console.WriteLine("4 reqemli eded daxil edin : ");
+            //int eded = int.Parse(Console.ReadLine());
+            //bool check = true;
+            //int qaliq = 0, rezerv = 0, qaliq2 = 0;
+
+            //while (eded>0 && check)
+            //{
+            //    qaliq = eded % 10;
+            //    rezerv = (eded / 10);
+            //    while (rezerv > 0 && check)
+            //    {
+            //        qaliq2 = rezerv % 10;
+            //        if (qaliq == qaliq2)
+            //        {
+            //            check = false;
+            //        }
+            //        rezerv = rezerv/ 10;
+            //    }
+            //    eded = eded / 10;
+            //}
+            //Console.WriteLine(check ? "Ededin reqemleri muxtelifdir.." : "Ededin reqemleri eynidi..");
+
+
+            ////// Qarishiq hell yolu //////
+
             //Console.WriteLine("4 Reqemli eded daxil edin :");
             //int eded = int.Parse(Console.ReadLine());
             //int qaliq = 0;
@@ -333,8 +362,8 @@ namespace Lesson130
             //else if (array[0] != array[1] && array[1] == array[2] && array[2] != array[3])
             //    Console.WriteLine("1ci ile 4cu , 2ci ile 3cu reqem eynidi");
             //else
-            //Console.WriteLine(test == 0 ? "Butun reqemler ferqlidi" : test + 1 == 4 ? "Butun reqemleri eynidi" :
-            //    $"Eyni reqemlerin sayi :{test + 1}");
+            //    Console.WriteLine(test == 0 ? "Butun reqemler ferqlidi" : test + 1 == 4 ? "Butun reqemleri eynidi" :
+            //        $"Eyni reqemlerin sayi :{test + 1}");
 
             #endregion
             #region Task 16
